@@ -32,11 +32,6 @@
 
         }
 
-        header > img {
-            width: 200px;
-            margin: 10px;
-        }
-
         header > ul > li:hover {
             cursor: pointer;
             color: blue;
@@ -44,32 +39,35 @@
 
         main > section {
             position: relative;
+
+        }
+
+        header>img{
+            width: 163px;
+            height: 69px;
+            padding: 10px;
         }
 
         main > section > nav {
             position: absolute;
             left: 0;
             bottom: 0;
-            top: -15px;
+            top: 0;
             width: 300px;
             background-color: #0c1e66;
         }
 
-        main > section > p {
+        main > section > section {
             margin-left: 300px;
             padding: 10px;
         }
 
-        main > section > img {
-            margin-left: 300px;
-            width: 250px;
-        }
 
-        main>section>nav>ul{
+        main > section > nav > ul {
             list-style: none;
         }
 
-        main>section>nav>ul>li{
+        main > section > nav > ul > li {
             color: white;
             padding-bottom: 15px;
             font-size: 21px;
@@ -77,13 +75,36 @@
             font-family: 'Patua One', cursive;
         }
 
-        main>section>nav>ul>li:hover{
+        main > section > nav > ul > li:hover {
             cursor: pointer;
             color: orange;
         }
 
-        main>section>nav>ul>li>i{
+        main > section > nav > ul > li > i {
             margin-right: 13px;
+        }
+
+        main > section > section > section {
+            height: 300px;
+            position: relative;
+        }
+
+        main > section > section > section > img {
+            position: absolute;
+            height: 100%;
+            width: calc(100% / 3);
+        }
+
+        main > section > section > section > img:nth-child(1) {
+            left: 0;
+        }
+
+        main > section > section > section > img:nth-child(2) {
+            left: calc(100%/3);
+        }
+
+        main > section > section > section > img:nth-child(3) {
+            left: calc((100%/3)*2);
         }
 
     </style>
@@ -108,33 +129,45 @@
                 <li><i class="fas fa-address-card"></i>About Us</li>
             </ul>
         </nav>
-        <!--<img alt="" src="assets/image/333.png">
-        <img alt="" src="assets/image/444.png">
-        <img alt="" src="assets/image/666.png">
-        <img alt="" src="">-->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, perferendis, voluptas? Aliquid animi,
-            atque corporis eligendi et eveniet ex fugit in iusto minima modi possimus quae quas ratione sed velit!</p>
-        <p>Accusamus atque consequatur, debitis deleniti dolore eligendi eos ex, facilis, fuga libero quam quibusdam
-            quod ratione sequi ullam vero voluptas. Aperiam atque cum facere, iusto laboriosam minus necessitatibus
-            porro repudiandae.</p>
-        <p>Ad blanditiis consequatur cupiditate delectus, deserunt dolores earum expedita id inventore ipsa ipsam ipsum
-            iure maiores nesciunt nulla officiis quae quas rem repellat, sed sequi sint tempore vel veritatis
-            voluptatibus.</p>
-        <p>Architecto asperiores aut consectetur consequatur distinctio, eaque enim explicabo hic maiores molestiae
-            numquam omnis, quidem quod reprehenderit sed suscipit veniam. Accusamus eligendi ex fugiat iure libero magni
-            molestiae repellat totam.</p>
-        <p>Ad animi commodi consectetur, consequuntur, corporis deleniti dolor, eligendi expedita ipsam labore minima
-            molestias mollitia nam odit pariatur quae quia quisquam repudiandae rerum suscipit ut vel veniam veritatis
-            vero vitae.</p>
-        <p>Architecto consequuntur iusto maxime, officia perspiciatis quas quisquam suscipit voluptatem? Aliquam
-            asperiores corporis cupiditate distinctio dolore earum est facilis fugit illum maiores minus nesciunt quasi
-            quibusdam, quisquam ratione. Aliquid, asperiores?</p>
-        <p>Ad consequatur cupiditate, deserunt dolore dolorem fuga, laboriosam nisi odio, possimus quo sit ut.
-            Blanditiis commodi culpa deserunt dolore dolorum, expedita libero nemo, numquam odit praesentium, rem sit
-            voluptate voluptates.</p>
-        <p>Ad alias autem, earum id iusto labore non quae quis reprehenderit totam! Aspernatur aut blanditiis distinctio
-            dolor doloribus illo magnam molestias nesciunt non pariatur, placeat qui sint temporibus veritatis
-            voluptatum?</p>
+        <section>
+            <section>
+                <img alt="" src="assets/image/pic1.png">
+                <img alt="" src="assets/image/pic2.png">
+                <img alt="" src="assets/image/pic3.png">
+            </section>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, perferendis, voluptas? Aliquid animi,
+                atque corporis eligendi et eveniet ex fugit in iusto minima modi possimus quae quas ratione sed
+                velit!</p>
+            <p>Accusamus atque consequatur, debitis deleniti dolore eligendi eos ex, facilis, fuga libero quam quibusdam
+                quod ratione sequi ullam vero voluptas. Aperiam atque cum facere, iusto laboriosam minus necessitatibus
+                porro repudiandae.</p>
+            <p>Ad blanditiis consequatur cupiditate delectus, deserunt dolores earum expedita id inventore ipsa ipsam
+                ipsum
+                iure maiores nesciunt nulla officiis quae quas rem repellat, sed sequi sint tempore vel veritatis
+                voluptatibus.</p>
+            <p>Architecto asperiores aut consectetur consequatur distinctio, eaque enim explicabo hic maiores molestiae
+                numquam omnis, quidem quod reprehenderit sed suscipit veniam. Accusamus eligendi ex fugiat iure libero
+                magni
+                molestiae repellat totam.</p>
+            <p>Ad animi commodi consectetur, consequuntur, corporis deleniti dolor, eligendi expedita ipsam labore
+                minima
+                molestias mollitia nam odit pariatur quae quia quisquam repudiandae rerum suscipit ut vel veniam
+                veritatis
+                vero vitae.</p>
+            <p>Architecto consequuntur iusto maxime, officia perspiciatis quas quisquam suscipit voluptatem? Aliquam
+                asperiores corporis cupiditate distinctio dolore earum est facilis fugit illum maiores minus nesciunt
+                quasi
+                quibusdam, quisquam ratione. Aliquid, asperiores?</p>
+            <p>Ad consequatur cupiditate, deserunt dolore dolorem fuga, laboriosam nisi odio, possimus quo sit ut.
+                Blanditiis commodi culpa deserunt dolore dolorum, expedita libero nemo, numquam odit praesentium, rem
+                sit
+                voluptate voluptates.</p>
+            <p>Ad alias autem, earum id iusto labore non quae quis reprehenderit totam! Aspernatur aut blanditiis
+                distinctio
+                dolor doloribus illo magnam molestias nesciunt non pariatur, placeat qui sint temporibus veritatis
+                voluptatum?</p>
+        </section>
+
     </section>
 </main>
 <footer>
