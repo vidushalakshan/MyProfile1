@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
     <title>Title</title>
     <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="assets/css/fonts/css/all.css" rel="stylesheet">
     <style>
         header {
             position: relative;
@@ -73,11 +74,16 @@
             padding-bottom: 15px;
             font-size: 21px;
             margin-top: 35px;
+            font-family: 'Patua One', cursive;
         }
 
         main>section>nav>ul>li:hover{
             cursor: pointer;
             color: orange;
+        }
+
+        main>section>nav>ul>li>i{
+            margin-right: 13px;
         }
 
     </style>
@@ -96,10 +102,10 @@
     <section>
         <nav>
             <ul>
-                <li>Home</li>
-                <li>Services</li>
-                <li>Contacts</li>
-                <li>About Us</li>
+                <li><i class="fas fa-home"></i>Home</li>
+                <li><i class="fas fa-globe-asia"></i>Services</li>
+                <li><i class="fas fa-phone"></i>Contacts</li>
+                <li><i class="fas fa-address-card"></i>About Us</li>
             </ul>
         </nav>
         <!--<img alt="" src="assets/image/333.png">
