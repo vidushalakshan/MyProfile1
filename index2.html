@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
     <title>Title</title>
-    <link rel="stylesheet" href="../../../assets/css/normalize.css">
+    <link href="assets/css/normalize.css" rel="stylesheet">
     <style>
-        header{
+        header {
             position: relative;
-            box-shadow: 2px 3px 6px 1px black;
+            box-shadow: -17px 2px 8px -4px black;
         }
-        header>ul{
+
+        header > ul {
             position: absolute;
             top: 0;
             right: 30px;
@@ -22,25 +23,68 @@
             list-style: none;
             font-family: 'Patua One', cursive;
         }
-        header>ul>li{
+
+        header > ul > li {
             display: inline-block;
             font-size: 20px;
             padding: 11px;
 
         }
-        header>img{
+
+        header > img {
             width: 200px;
             margin: 10px;
         }
-        header>ul>li:hover{
+
+        header > ul > li:hover {
             cursor: pointer;
             color: blue;
         }
+
+        main > section {
+            position: relative;
+        }
+
+        main > section > nav {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: -15px;
+            width: 300px;
+            background-color: #0c1e66;
+        }
+
+        main > section > p {
+            margin-left: 300px;
+            padding: 10px;
+        }
+
+        main > section > img {
+            margin-left: 300px;
+            width: 250px;
+        }
+
+        main>section>nav>ul{
+            list-style: none;
+        }
+
+        main>section>nav>ul>li{
+            color: white;
+            padding-bottom: 15px;
+            font-size: 21px;
+            margin-top: 35px;
+        }
+
+        main>section>nav>ul>li:hover{
+            cursor: pointer;
+            color: orange;
+        }
+
     </style>
 </head>
 <body>
 <header>
-    <img src="../../../assets/image/ijse.png">
+    <img src="assets/image/ijse.png">
     <ul>
         <li>Home</li>
         <li>Services</li>
@@ -58,6 +102,10 @@
                 <li>About Us</li>
             </ul>
         </nav>
+        <!--<img alt="" src="assets/image/333.png">
+        <img alt="" src="assets/image/444.png">
+        <img alt="" src="assets/image/666.png">
+        <img alt="" src="">-->
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, perferendis, voluptas? Aliquid animi,
             atque corporis eligendi et eveniet ex fugit in iusto minima modi possimus quae quas ratione sed velit!</p>
         <p>Accusamus atque consequatur, debitis deleniti dolore eligendi eos ex, facilis, fuga libero quam quibusdam
