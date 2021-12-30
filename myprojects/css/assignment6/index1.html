@@ -5,10 +5,11 @@
     <title>Title</title>
     <style>
 
-        body{
+        body {
             background-color: #2b2be7;
         }
-        section{
+
+        section {
             width: 275px;
             height: 275px;
             border-radius: 100%;
@@ -20,9 +21,10 @@
             right: 0;
             margin: auto;
             border-top: 13px solid red;
+            background-color: dimgray;
         }
 
-        section>h2{
+        section > h2 {
             position: absolute;
             top: 0;
             bottom: 0;
@@ -32,6 +34,17 @@
             width: max-content;
             height: max-content;
             color: white;
+        }
+
+        section:hover {
+            transform: rotate(360deg);
+            transition: all 1s;
+            cursor: pointer;
+        }
+
+        section:hover h2 {
+            transform: rotate(-360deg);
+            transition: all 1s;
         }
     </style>
 </head>
