@@ -2,8 +2,53 @@
 <html>
 <head>
 
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <style>
+
+        body {
+            background-color: #281d1d;
+        }
+
+        /* styling navbar*/
+        body > header > section > section {
+            position: fixed;
+            width: 100%;
+            background-color: red;
+        }
+
+        body > header > section > section > nav {
+            position: relative;
+            padding: 20px;
+            font-family: 'ubuntu', sans-serif;
+            left: 650px;
+        }
+
+        body > header > section > section > nav > a {
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            text-decoration-line: none;
+            font-weight: 500;
+        }
+
+        header > section > section > nav > div {
+            position: fixed;
+            top: -68px;
+            left: 23px;
+        }
+
+        header > section > section > nav > div > h3 {
+            font-size: 55px;
+            padding: 15px;
+            font-weight: 600;
+            color: white;
+        }
+       /* close navbar*/
+
+    </style>
 
 
+</head>
 <body>
 
 <header>
@@ -17,20 +62,23 @@
                 <a href="#myservice">My Service</a>
                 <a href="#favourite">Favourite</a>
                 <a href="#contact">Contact</a>
+                <div>
+                    <h3>VL</h3>
+                </div>
             </nav>
-            <img src="assets/image/iii.png" alt="There was an error loading this image.." width="50">
-            <img src="assets/image/vvv.png" alt="There was an error loading this image.." width="300">
-            <article>
+        </section>
+        <div>
+            <img alt="There was an error loading this image.." src="assets/image/vvv.png" width="300">
+        </div>
+        <article>
                 <pre>
                     Hello, I'm
                     Vidusha Lakshan
                     And I'm a
                     Software Developer
                 </pre>
-            </article>
-        </section>
+        </article>
         <section>
-            <nav></nav>
         </section>
     </section>
 </header>
@@ -38,9 +86,11 @@
 
 <main>
     <section>
-        <h1><center><dfn id="aboutme">About Me</dfn></center></h1>
-        <img src="assets/image/222.png" alt="There was an error loading this image.." width="300">
-            <asid>
+        <h1>
+            <center><dfn id="aboutme">About Me</dfn></center>
+        </h1>
+        <img alt="There was an error loading this image.." src="assets/image/222.png" width="300">
+        <asid>
                 <pre>
                     Name    -    A.M Vidusha Lakshan Predeep
 
@@ -55,7 +105,7 @@
                     Language-    English/Sinhala
                     
                 </pre>
-            </asid>
+        </asid>
         <article>
             <p>
                 I'm a Software Engineering student in institute of java Software Engineering (ijse)
@@ -65,21 +115,19 @@
     </section>
 
 
-
     <section>
         <h1>
             <center><dfn id="skil">Skils</dfn></center>
         </h1>
-        <img src="assets/image/333.png" alt="There was an error loading.." width="300">
+        <img alt="There was an error loading.." src="assets/image/333.png" width="300">
         <div>Java</div>
-        <img src="assets/image/444.png" alt="There was an error loading.." width="300">
+        <img alt="There was an error loading.." src="assets/image/444.png" width="300">
         <div>MySql</div>
-        <img src="assets/image/555.png" alt="There was an error loading.." width="300">
+        <img alt="There was an error loading.." src="assets/image/555.png" width="300">
         <div>Html</div>
-        <img src="assets/image/666.png" alt="There was an error loading.." width="300">
+        <img alt="There was an error loading.." src="assets/image/666.png" width="300">
         <div>Css</div>
     </section>
-
 
 
     <section>
@@ -89,7 +137,6 @@
     </section>
 
 
-
     <section>
         <h1>
             <center><dfn id="myservice">My Service</dfn></center>
@@ -97,13 +144,11 @@
     </section>
 
 
-
     <section>
         <h1>
             <center><dfn id="favourite">Favourite</dfn></center>
         </h1>
     </section>
-
 
 
     <section>
@@ -119,7 +164,6 @@
         </section>
 
     </section>
-
 
 
     <footer>
