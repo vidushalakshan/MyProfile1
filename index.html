@@ -1,97 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
 
     <link href="assets/css/normalize.css" rel="stylesheet">
     <style>
-
-        body {
-            background-color: #02051c;
-        }
-        body>header{
-            position: relative;
-        }
-
-        /* styling navbar*/
-
-        body > header > section {
+        /*navbar Styling start*/
+        header {
+           /* border: 1px solid red;*/
             position: fixed;
+            height: 62px;
             width: 100%;
-            background-color: red;
+            background-color: crimson;
         }
 
-        body > header > section > nav {
-            position: relative;
-            padding: 20px;
-            font-family: 'ubuntu', sans-serif;
-            left: 650px;
-        }
-
-        body > header > section > nav > a {
-            color: white;
-            font-size: 18px;
-            padding: 10px;
-            text-decoration-line: none;
-            font-weight: 500;
-        }
-
-        header > section > nav > div {
-            position: fixed;
-            top: -68px;
-            left: 23px;
-        }
-
-        header > section > nav > div > h3 {
+        header > h1 {
             font-size: 55px;
-            padding: 15px;
-            font-weight: 600;
+            display: inline;
             color: white;
-        }
-
-        /* close navbar*/
-
-        /* Home Styling start*/
-
-        .homeimage {
-            margin-left: 870px;
-            width: 35vw;
-            height: 100vh;
-            left: 200px;
-        }
-
-        header > section > article {
+            font-weight: bold;
             position: relative;
-            padding-bottom: 10px;
+            left: 22px;
         }
 
-        .hometext {
+        header > nav > ul {
+            position: absolute;
+            right: 25px;
+            bottom: -21px;
+            top: 0;
+            margin: auto;
+            height: 40px;
+            font-size: 17px;
+            list-style: none;
+            text-decoration-line: none;
+            font-family: 'Crete Round', serif;
+        }
+
+        header > nav > ul > li {
+            display: inline;
+            text-decoration-line: none;
+            padding: 0 10px 0 10px;
+        }
+
+        header > nav > ul > li > a {
+            text-decoration-line: none;
             color: white;
-            margin-top: -500px;
-            margin-left: 55px;
-            font-family: 'ubuntu', sans-serif;
         }
-
-        .text1 {
-            font-size: 25px;
-        }
-
-        .text2 {
-            font-size: 70px;
-            font-weight: 600;
-        '
-        }
-
-        .text3 {
-            font-size: 25px;
-        }
-
-        .text4 {
-            font-size: 60px;
-            font-weight: 600;
-            color: crimson;
-        }
+       /* navbar stylig stop*/
 
     </style>
 
@@ -100,23 +59,23 @@
 <body>
 
 <header>
-    <section>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#aboutme">About Me</a>
-            <a href="#skil">Skils</a>
-            <a href="#myprojects">My Projects</a>
-            <a href="#myservice">My Service</a>
-            <a href="#favourite">Favourite</a>
-            <a href="#contact">Contact</a>
-            <div>
-                <h3>VL</h3>
-            </div>
-        </nav>
-    </section>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#skil">Skils</a></li>
+            <li><a href="#myprojects">My Projects</a></li>
+            <li><a href="#myservice">My Service</a></li>
+            <li><a href="#favourite">Favourite</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <h1>VL</h1>
     <!-- close navbar-->
+</header>
 
-    <!-- start home-->
+
+<main>
     <div class="homeimg">
         <img alt="There was an error loading this image.." class="homeimage" src="assets/image/vvv.png" width="300">
     </div>
@@ -129,31 +88,25 @@
         </pre>
     </article>
     <section>
-    </section>
-</header>
-
-
-<main>
-    <section>
         <h1>
             <center><dfn id="aboutme">About Me</dfn></center>
         </h1>
         <img alt="There was an error loading this image.." src="assets/image/222.png" width="300">
         <asid>
-                <pre>
-                    Name    -    A.M Vidusha Lakshan Predeep
+            <!--<pre>
+                Name    -    A.M Vidusha Lakshan Predeep
 
-                    Age     -    20
+                Age     -    20
 
-                    E-Mail  -    vidushalakshan7890@gmail.com
+                E-Mail  -    vidushalakshan7890@gmail.com
 
-                    Phone   -    +94 718655056
+                Phone   -    +94 718655056
 
-                    Diploma -    Software Enginnering
+                Diploma -    Software Enginnering
 
-                    Language-    English/Sinhala
-                    
-                </pre>
+                Language-    English/Sinhala
+
+            </pre>-->
         </asid>
         <article>
             <p>
