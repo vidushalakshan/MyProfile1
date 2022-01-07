@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
 
     <link href="assets/css/normalize.css" rel="stylesheet">
     <style>
         /*navbar Styling start*/
         header {
-           /* border: 1px solid red;*/
+            /* border: 1px solid red;*/
             position: fixed;
             height: 62px;
             width: 100%;
+            z-index:1;
             background-color: crimson;
         }
 
@@ -50,7 +51,26 @@
             text-decoration-line: none;
             color: white;
         }
-       /* navbar stylig stop*/
+
+        /* navbar stylig stop*/
+
+        /*Home Styling Start*/
+        main{
+            position: relative;
+        }
+
+       main>section:nth-child(1){
+           border: 1px solid red;
+           height: 608px;
+       }
+
+        main > section >div >img{
+           position: absolute;
+            right: 0;
+            top: -16px;
+            height: 100vh ;
+            width: 28vw;
+        }
 
     </style>
 
@@ -76,17 +96,19 @@
 
 
 <main>
-    <div class="homeimg">
-        <img alt="There was an error loading this image.." class="homeimage" src="assets/image/vvv.png" width="300">
-    </div>
-    <article>
+    <section>
+        <div class="homeimg">
+            <img alt="There was an error loading this image.." class="homeimage" src="assets/image/vvvv.jpg" width="300">
+        </div>
+        <article>
         <pre class="hometext">
             <div class="text1">Hello, I'm</div>
             <div class="text2">Vidusha Lakshan</div>
             <div class="text3">And I'm a</div>
             <div class="text4">Software Developer</div>
         </pre>
-    </article>
+        </article>
+    </section>
     <section>
         <h1>
             <center><dfn id="aboutme">About Me</dfn></center>
