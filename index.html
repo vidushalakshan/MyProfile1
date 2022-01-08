@@ -57,23 +57,34 @@
 
         /*Home Styling Start*/
         main {
-            position: relative;
+
         }
 
         .home {
             background-color: #00002a;
+            width: max-content;
         }
 
-        .hometext{
+        .hometext {
+            display: inline;
             margin-top: -1px;
         }
 
 
-        main > section:nth-child(1) > img{
+        main > section:nth-child(1) > img {
             margin-left: 871px;
             margin-top: -213px;
             height: 100vh;
             width: 35vw;
+        }
+
+        /*homr media start*/
+
+        @media all and (min-width: 1460px) {
+            main > section:nth-child(1) > img {
+                margin-left: 956px;
+            }
+
         }
 
     </style>
