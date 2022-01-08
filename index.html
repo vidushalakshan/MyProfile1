@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Hello There</title>
+    <title>My Profile</title>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -12,7 +12,6 @@
     <style>
         /*navbar Styling start*/
         header {
-            /* border: 1px solid red;*/
             position: fixed;
             height: 62px;
             width: 100%;
@@ -154,6 +153,8 @@
             width: 60px;
         }*/
 
+        /*home styling stop*/
+
         /*homr media start*/
 
         @media all and (min-width: 1460px) {
@@ -184,6 +185,48 @@
             }
 
         }
+        /*home media stop*/
+
+       /* aboutme styling start*/
+
+        section:nth-child(2){
+            border: 1px solid red;
+        }
+        section:nth-child(2)>h1{
+            text-align: center;
+        }
+
+        #aboutme{
+            font-weight: 600;
+            font-style: normal;
+            font-size: 55px;
+            color: crimson;
+        }
+
+        .detail{
+            position: absolute;
+            right: 21px;
+            bottom: -651px;
+            margin: auto;
+            font-size: 32px;
+            font-weight: bold;
+            display: inline;
+        }
+
+        .aboutimg{
+            height: 64vh;
+            width: 30vw;
+            margin-left: 46px;
+            margin-top: 49px;
+        }
+
+        .aboutedu{
+            text-align: center;
+            font-size: 25px;
+            margin-top: 58px;
+            font-weight: bold;
+        }
+
 
     </style>
 
@@ -231,11 +274,11 @@
     </section>
     <section>
         <h1>
-            <center><dfn id="aboutme">About Me</dfn></center>
+            <dfn id="aboutme">About Me</dfn>
         </h1>
-        <img alt="There was an error loading this image.." src="assets/image/222.png" width="300">
+        <img alt="There was an error loading this image.." class="aboutimg" src="assets/image/222.png" width="300">
         <asid>
-            <!--<pre>
+            <pre class="detail">
                 Name    -    A.M Vidusha Lakshan Predeep
 
                 Age     -    20
@@ -248,10 +291,10 @@
 
                 Language-    English/Sinhala
 
-            </pre>-->
+            </pre>
         </asid>
         <article>
-            <p>
+            <p class="aboutedu">
                 I'm a Software Engineering student in institute of java Software Engineering (ijse)
                 and currently completing second semester.
             </p>
