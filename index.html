@@ -323,28 +323,53 @@
             position: absolute;
             height: 100%;
             width: calc(100%/4);
+            transition: ease-out 0.3s;
+        }
+
+        main > section:nth-child(3) > section>div:hover{
+            cursor: pointer;
+            background-color: #9ca308;
+            transform: scale(1.05);
         }
 
         main > section:nth-child(3) > section>div:nth-child(1){
             left: 0;
             background-size: cover;
+            padding-left: 19px;
         }
 
         main > section:nth-child(3) > section>div:nth-child(2){
             left: calc(100%/4);
             background-size: cover;
+            padding-left: 19px;
         }
 
 
         main > section:nth-child(3) > section>div:nth-child(3){
             left: calc((100%/4)*2);
+            padding-left: 19px;
             background-size: cover;
         }
 
 
         main > section:nth-child(3) > section>div:nth-child(4){
             left: calc((100%/4)*3);
+            padding-left: 19px;
             background-size: cover;
+        }
+
+        .skiltxt{
+            color: white;
+            padding-left: 112px;
+        }
+
+        main > section:nth-child(3) >div{
+            height: 15px;
+            width: 15px;
+            margin: 66px 749px;
+            outline: none;
+            border-radius: 50%;
+            border: 2px solid crimson;
         }
 
 
@@ -447,21 +472,23 @@
         <section>
             <div>
                 <img alt="There was an error loading.." src="assets/image/333.png" width="300">
-                <h2>Java</h2>
+                <h2 class="skiltxt">Java</h2>
             </div>
             <div>
                 <img alt="There was an error loading.." src="assets/image/444.png" width="300">
-                <h2>MySql</h2>
+                <h2 class="skiltxt">MySql</h2>
             </div>
             <div>
                 <img alt="There was an error loading.." src="assets/image/555.png" width="300">
-                <h2>Html</h2>
+                <h2 class="skiltxt">Html</h2>
             </div>
             <div>
                 <img alt="There was an error loading.." src="assets/image/666.png" width="300">
-                <h2>Css</h2>
+                <h2 class="skiltxt">Css</h2>
             </div>
         </section>
+        <div>
+        </div>
     </section>
 
 
