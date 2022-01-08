@@ -15,7 +15,7 @@
             position: fixed;
             height: 62px;
             width: 100%;
-            z-index:1;
+            z-index: 1;
             background-color: crimson;
         }
 
@@ -52,24 +52,23 @@
             color: white;
         }
 
+
         /* navbar stylig stop*/
 
         /*Home Styling Start*/
-        main{
+        main {
             position: relative;
         }
 
-       main>section:nth-child(1){
-           border: 1px solid red;
-           height: 608px;
-       }
+        .home {
+            background-color: #00002a;
+        }
 
-        main > section >div >img{
-           position: absolute;
-            right: 0;
-            top: -16px;
-            height: 100vh ;
-            width: 28vw;
+        main > section:nth-child(1) > img{
+            margin-left: 871px;
+            margin-top: -213px;
+            height: 100vh;
+            width: 35vw;
         }
 
     </style>
@@ -96,10 +95,7 @@
 
 
 <main>
-    <section>
-        <div class="homeimg">
-            <img alt="There was an error loading this image.." class="homeimage" src="assets/image/vvvv.jpg" width="300">
-        </div>
+    <section class="home">
         <article>
         <pre class="hometext">
             <div class="text1">Hello, I'm</div>
@@ -108,6 +104,7 @@
             <div class="text4">Software Developer</div>
         </pre>
         </article>
+        <img alt="There was an error loading this image.." class="homeimage" src="assets/image/vvv.png" width="300">
     </section>
     <section>
         <h1>
