@@ -191,9 +191,12 @@
 
         section:nth-child(2){
             border: 1px solid red;
+            background-color: black;
+            border: none;
         }
         section:nth-child(2)>h1{
             text-align: center;
+            margin-top: 0;
         }
 
         #aboutme{
@@ -205,18 +208,19 @@
 
         .detail{
             position: absolute;
-            right: 21px;
+            right: 48px;
             bottom: -651px;
             margin: auto;
             font-size: 32px;
             font-weight: bold;
             display: inline;
+            color: white;
         }
 
         .aboutimg{
-            height: 64vh;
-            width: 30vw;
-            margin-left: 46px;
+            height: 63vh;
+            width: 32vw;
+            margin-left: 41px;
             margin-top: 49px;
         }
 
@@ -225,8 +229,52 @@
             font-size: 25px;
             margin-top: 58px;
             font-weight: bold;
+            color: white;
+            margin-left: -215px;
         }
 
+        .about1{
+            color: orange;
+        }
+
+        .about2{
+            color: orange;
+        }
+
+        .about3{
+            color: orange;
+        }
+
+        .about4{
+            color: orange;
+        }
+
+        .about5{
+            color: orange;
+        }
+        .about6{
+            color: orange;
+        }
+
+        .btn2{
+            margin-left: 1225px;
+            height: 65px;
+            width: 207px;
+            font-size: 25px;
+            color: white;
+            background-color: blue;
+            font-family: 'Crete Round', serif;
+            transition: ease-out 0.3s;
+            border-radius: 23px;
+        }
+
+        .btn2:hover{
+            color: #e8e8e8;
+            cursor: pointer;
+            background: none;
+            outline: none;
+            border:3px solid deepskyblue;
+        }
 
     </style>
 
@@ -279,26 +327,29 @@
         <img alt="There was an error loading this image.." class="aboutimg" src="assets/image/222.png" width="300">
         <asid>
             <pre class="detail">
-                Name    -    A.M Vidusha Lakshan Predeep
+                Name    -    <b class="about1">A.M Vidusha Lakshan Predeep</b>
 
-                Age     -    20
+                Age     -    <b class="about2">20</b>
 
-                E-Mail  -    vidushalakshan7890@gmail.com
+                E-Mail  -    <b class="about3">vidushalakshan7890@gmail.com</b>
 
-                Phone   -    +94 718655056
+                Phone   -    <b class="about4">+94 718655056</b>
 
-                Diploma -    Software Enginnering
+                Diploma -    <b class="about5">Software Enginnering</b>
 
-                Language-    English/Sinhala
+                Language-    <b class="about6">English/Sinhala</b>
 
             </pre>
         </asid>
         <article>
-            <p class="aboutedu">
+            <pre class="aboutedu">
                 I'm a Software Engineering student in institute of java Software Engineering (ijse)
                 and currently completing second semester.
-            </p>
+            </pre>
         </article>
+        <div>
+            <button class="btn2">Download CV</button>
+        </div>
     </section>
 
 
