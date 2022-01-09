@@ -60,8 +60,7 @@
 
         /*Home Styling Start*/
         main {
-            background-color: #040440;
-            width: 100%;
+            background-color:#252525;
 
         }
 
@@ -206,14 +205,18 @@
 
         /* aboutme styling start*/
 
-        section:nth-child(2), section:nth-child(3) {
-            background-color: black;
+        section:nth-child(2), section:nth-child(3), main > section:nth-child(4) {
             border: none;
         }
 
         section:nth-child(2) > h1 {
             text-align: center;
             margin-top: 0;
+        }
+
+        .aboutmemain{
+            text-align: center;
+            margin-top: 20px;
         }
 
         #aboutme {
@@ -319,59 +322,130 @@
             position: relative;
         }
 
-        main > section:nth-child(3) > section>div{
+        main > section:nth-child(3) > section > div {
             position: absolute;
             height: 100%;
-            width: calc(100%/4);
+            width: calc(100% / 4);
             transition: ease-out 0.3s;
         }
 
-        main > section:nth-child(3) > section>div:hover{
+        main > section:nth-child(3) > section > div:hover {
             cursor: pointer;
-            background-color: #9ca308;
+            background-color: #110bba;
             transform: scale(1.05);
         }
 
-        main > section:nth-child(3) > section>div:nth-child(1){
+        main > section:nth-child(3) > section > div:nth-child(1) {
             left: 0;
             background-size: cover;
             padding-left: 19px;
         }
 
-        main > section:nth-child(3) > section>div:nth-child(2){
-            left: calc(100%/4);
+        main > section:nth-child(3) > section > div:nth-child(2) {
+            left: calc(100% / 4);
             background-size: cover;
             padding-left: 19px;
         }
 
 
-        main > section:nth-child(3) > section>div:nth-child(3){
-            left: calc((100%/4)*2);
+        main > section:nth-child(3) > section > div:nth-child(3) {
+            left: calc((100% / 4) * 2);
             padding-left: 19px;
             background-size: cover;
         }
 
 
-        main > section:nth-child(3) > section>div:nth-child(4){
-            left: calc((100%/4)*3);
+        main > section:nth-child(3) > section > div:nth-child(4) {
+            left: calc((100% / 4) * 3);
             padding-left: 19px;
             background-size: cover;
         }
 
-        .skiltxt{
+        .skiltxt {
             color: white;
             padding-left: 112px;
         }
 
-        main > section:nth-child(3) >div{
+        main > section:nth-child(3) > div {
             height: 15px;
             width: 15px;
-            margin: 66px 749px;
+            margin: 45px 749px;
             outline: none;
             border-radius: 50%;
             border: 2px solid crimson;
         }
 
+       /* skil styling stop*/
+
+       /* project styling start*/
+
+        main > section:nth-child(4) > {
+            position: absolute;
+
+        }
+
+        .pname{
+            position: absolute;
+            left: 602px;
+            bottom: -1686px;
+            margin: -0.33em 0;
+        }
+
+        #myprojects {
+            color: crimson;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 65px;
+            font-family: 'Crete Round', serif;
+        }
+        main>section:nth-child(4)>section{
+            height: 400px;
+            margin-top: 385px;
+        }
+
+        main>section:nth-child(4)>section>div{
+            position: absolute;
+            width: calc(100%/3);
+            transition: ease-out 0.3s;
+        }
+        main>section:nth-child(4)>section>div:nth-child(1){
+            left: 0;
+            background-size: cover;
+            margin-left: 35px;
+            width: 415px;
+        }
+
+        main>section:nth-child(4)>section>div:nth-child(2){
+            left: calc(100%/3);
+            background-size: cover;
+            margin-left: 35px;
+            width: 415px;
+        }
+
+        main>section:nth-child(4)>section>div:nth-child(3){
+            left: calc((100%/3)*2);
+            background-size: cover;
+            margin-left: 35px;
+            width: 415px;
+        }
+
+        .pimg{
+            width: 415px;
+        }
+
+        main > section:nth-child(4) > section > div:hover {
+            cursor: pointer;
+            background-color: #ba0b2e;
+            transform: scale(1.05);
+        }
+
+        /*end project styling*/
+
+        main > section:nth-child(5)>h1{
+            border: 1px solid red;
+            margin: 7.67em 0;
+            text-align: center;
+        }
 
 
     </style>
@@ -412,7 +486,7 @@
         <div>
             <button class="btn1">Hire Me</button>
         </div>
-        <img alt="There was an error loading this image.." class="homeimage" src="assets/image/vvv.png" width="300">
+        <img alt="There was an error loading this image.." class="homeimage" src="assets/image/vvv.png">
         <div>
             <img alt="There was an error loading this image.." class="imglinl1" src="assets/image/link1.png"
                  width="300">
@@ -430,10 +504,10 @@
 
 
     <section>
-        <h1>
+        <h1 class="aboutmemain">
             <dfn id="aboutme">About Me</dfn>
         </h1>
-        <img alt="There was an error loading this image.." class="aboutimg" src="assets/image/222.png" width="300">
+        <img alt="There was an error loading this image.." class="aboutimg" src="assets/image/222.png">
         <asid>
             <pre class="detail">
                 Name    -    <b class="about1">A.M Vidusha Lakshan Predeep</b>
@@ -471,44 +545,60 @@
         </h1>
         <section>
             <div>
-                <img alt="There was an error loading.." src="assets/image/333.png" width="300">
+                <img alt="There was an error loading.." src="assets/image/333.png">
                 <h2 class="skiltxt">Java</h2>
             </div>
             <div>
-                <img alt="There was an error loading.." src="assets/image/444.png" width="300">
+                <img alt="There was an error loading.." src="assets/image/444.png">
                 <h2 class="skiltxt">MySql</h2>
             </div>
             <div>
-                <img alt="There was an error loading.." src="assets/image/555.png" width="300">
+                <img alt="There was an error loading.." src="assets/image/555.png">
                 <h2 class="skiltxt">Html</h2>
             </div>
             <div>
-                <img alt="There was an error loading.." src="assets/image/666.png" width="300">
+                <img alt="There was an error loading.." src="assets/image/666.png">
                 <h2 class="skiltxt">Css</h2>
             </div>
         </section>
         <div>
         </div>
     </section>
+    <!--end skil section-->
+
+    <!--start project section-->
+    <section>
+
+            <h1 class="pname">
+                <dfn id="myprojects">My Projects</dfn>
+            </h1>
+        <section>
+            <div>
+                <img alt="There was an error loading this image.." class="pimg" src="assets/image/project1.png">
+                <h2 class="ptxt">Blue Ocean Hotel</h2>
+            </div>
+            <div>
+                <img alt="There was an error loading this image.." class="pimg" src="assets/image/project2.png">
+                <h2 class="ptxt">Book Shop</h2>
+            </div>
+            <div>
+                <img alt="There was an error loading this image.." class="pimg" src="assets/image/project3.png">
+                <h2 class="ptxt">Super Market</h2>
+            </div>
+        </section>
+    </section>
 
 
     <section>
         <h1>
-            <center><dfn id="myprojects">My Projects</dfn></center>
+            <dfn id="myservice">My Service</dfn>
         </h1>
     </section>
 
 
     <section>
         <h1>
-            <center><dfn id="myservice">My Service</dfn></center>
-        </h1>
-    </section>
-
-
-    <section>
-        <h1>
-            <center><dfn id="favourite">Favourite</dfn></center>
+            <dfn id="favourite">Favourite</dfn>
         </h1>
     </section>
 
