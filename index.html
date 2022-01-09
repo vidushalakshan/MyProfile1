@@ -518,7 +518,7 @@
         main>section:nth-child(5)>section>div:nth-child(2){
             left: calc(100%/3);
             background-size: cover;
-            margin-left: 70px;
+            margin-left: 108px;
             width: 271px;
             border-radius: 40px;
         }
@@ -545,6 +545,79 @@
             cursor: pointer;
             background-color: #ba0b2e;
             transform: scale(1.05);
+        }
+
+        main>section:nth-child(5)>div{
+            border: 1px solid red;
+            height: 15px;
+            width: 15px;
+            margin: -9px 749px;
+            outline: none;
+            border-radius: 50%;
+            border: 2px solid crimson;
+        }
+       /*end service styling*/
+
+       /* start favourite styling*/
+
+        main>section:nth-child(6){
+            position: relative;
+        }
+
+        main>section:nth-child(6)>h1{
+            margin: 4.67em 0;
+            text-align: center;
+            margin-bottom: 0px;
+            font-family: 'Crete Round', serif;
+        }
+
+        #favourite{
+            font-weight: 600;
+            font-style: normal;
+            font-size: 55px;
+            color: crimson;
+            font-family: 'Crete Round', serif;
+        }
+
+        main>section:nth-child(6)>section{
+            height: 575px;
+            margin-top: 65px;
+        }
+
+        main>section:nth-child(6)>section>div{
+            position: absolute;
+            width: calc(100%/3);
+            transition: ease-out 0.3s;
+        }
+
+        main>section:nth-child(6)>section>div:nth-child(1){
+            left: 66px;
+            background-size: cover;
+            margin-left: 35px;
+            width: 291px;
+            border-radius: 40px;
+        }
+
+        main>section:nth-child(6)>section>div:nth-child(2){
+            left: calc(100%/3);
+            background-size: cover;
+            margin-left: 108px;
+            width: 291px;
+            border-radius: 40px;
+        }
+
+        main>section:nth-child(6)>section>div:nth-child(3){
+            left: calc((100%/3)*2);
+            background-size: cover;
+            width: 291px;
+            border-radius: 40px;
+            margin-left: 91px;
+        }
+
+        .fav{
+            width: 291px;
+            height: 238px;
+            border-radius: 50px;
         }
 
     </style>
@@ -697,18 +770,19 @@
         </h1>
         <section>
             <div>
-                <img alt="There was an error loading this image.." class="simg" src="assets/image/s3.png">
+                <img alt="There was an error loading this image.." class="simg"  src="assets/image/s3.png">
                 <h2 class="stxt">Software Development</h2>
             </div>
             <div>
-                <img alt="There was an error loading this image.." class="simg" src="assets/image/s2.png">
+                <img alt="There was an error loading this image.." class="simg"  src="assets/image/s2.png">
                 <h2 class="stxt">Web Development</h2>
             </div>
             <div>
-                <img alt="There was an error loading this image.." class="simg" src="assets/image/s1.png">
+                <img alt="There was an error loading this image.." class="simg"  src="assets/image/s1.png">
                 <h2 class="stxt">Freelancer</h2>
             </div>
         </section>
+        <div></div>
     </section>
 
 
@@ -716,6 +790,23 @@
         <h1>
             <dfn id="favourite">Favourite</dfn>
         </h1>
+        <section>
+            <div>
+                <h2 class="stxt">Sport</h2>
+                <img alt="There was an error loading this image.." class="fav" src="assets/image/cricket.jpg">
+                <img alt="There was an error loading this image.." class="fav" src="assets/image/vollyball.jpg">
+            </div>
+            <div>
+                <h2 class="stxt">Video Games</h2>
+                <img alt="There was an error loading this image.." class="fav" src="assets/image/colofduty.png">
+                <img alt="There was an error loading this image.." class="fav" src="assets/image/gta.jpg">
+            </div>
+            <div>
+                <h2 class="stxt">Traveling & Music</h2>
+                <img alt="There was an error loading this image.." class="fav" src="assets/image/travelling.jpg">
+                <img alt="There was an error loading this image.." class="fav" src="assets/image/music.png">
+            </div>
+        </section>
     </section>
 
 
