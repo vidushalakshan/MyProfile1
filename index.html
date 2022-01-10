@@ -58,10 +58,32 @@
 
         /* navbar stylig stop*/
 
+        /*nav bar media start*/
+
+        @media all and (max-device-width:425px){
+            header > nav > ul {
+                right: 0;
+                bottom: 0;
+                top: 0;
+                left: 97px;
+                font-size: 35px;
+            }
+
+            header {
+                height: 106px;
+            }
+
+            main {
+                background-color: #252525;
+                width: 1432px;
+            }
+        }
+
+       /* nav bar media end*/
+
         /*Home Styling Start*/
         main {
             background-color: #252525;
-            width: initial;
 
         }
 
@@ -109,13 +131,6 @@
         }
 
 
-        /*  main > section:nth-child(1) > img {
-              margin-left: 981px;
-              margin-top: -604px;
-              height: 100vh;
-              width: 35vw;
-          }*/
-
         .homeimage {
             position: absolute;
             top: 0;
@@ -147,10 +162,6 @@
             border: 3px solid deepskyblue;
         }
 
-        main > section:nth-child(1) > div:nth-child(2) {
-
-        }
-
         .imglinl1 {
             height: 50px;
             width: 60px;
@@ -180,34 +191,56 @@
 
         /*homr media start*/
 
-        /* @media all and (min-width: 1460px) {
-             main > section:nth-child(1) > img {
-                 margin-left: 981px;
-                 margin-top: -604px;
-             }
+        @media all and (max-device-width:425px) {
+            .homeimage {
+                display: none;
+            }
 
-             .text1{
-                 font-size: 44px;
-             }
+            .text1 {
+                font-size: 84px;
+            }
 
-             .text2{
-                 font-size: 73px;
-             }
+            .text2 {
+                font-size: 161px;
+            }
 
-             .text3{
-                 font-size: 44px;
-             }
+            .text3 {
+                font-size: 86px;
+            }
 
-             .text4{
-                 font-size: 57px;
-             }
+            .text4 {
+                font-size: 123px;
+            }
 
-             .btn1{
-                 height: 53px;
-                 width: 120px;
-             }
 
-         }*/
+            .btn1 {
+                margin-top: -159px;
+                margin-left: 41px;
+                height: 71px;
+                width: 302px;
+                font-size: 54px;
+            }
+
+            .imglinl1 {
+                height: 69px;
+                width: 89px;
+            }
+            .imglink2{
+                height: 69px;
+                width: 89px;
+            }
+            .imglink3 {
+                height: 69px;
+                width: 89px;
+            }
+            .imglink4 {
+                height: 69px;
+                width: 89px;
+            }
+
+        }
+
+
         /*home media stop*/
 
         /* aboutme styling start*/
@@ -307,6 +340,46 @@
 
         /* aboutme styling stop*/
 
+        /*about media start*/
+        @media all and (max-device-width:425px) {
+            section:nth-child(2) > h1 {
+                margin-top: 34px;
+            }
+
+            .aboutimg {
+                height: 165vh;
+                width: 268vw;
+                margin-left: 135px;
+                margin-top: 49px;
+            }
+
+            .detail {
+                position: absolute;
+                right: -871px;
+                bottom: -2387px;
+                margin: auto;
+                font-size: 50px;
+                font-weight: bold;
+                display: inline;
+                color: white;
+            }
+
+            .aboutedu {
+                font-size: 29px;
+                margin-top: 875px;
+                margin-left: -265px;
+            }
+
+            .btn2 {
+                margin-left: 1105px;
+                height: 103px;
+                width: 263px;
+                font-size: 34px;
+            }
+        }
+
+        /*End medeia aboutme*/
+
         /*skill styling start*/
 
         main > section:nth-child(3) > h1 {
@@ -386,6 +459,48 @@
         }
 
         /* skil styling stop*/
+
+        /*Start skils media*/
+
+        @media all and (max-device-width:425px) {
+            #skil {
+                font-size: 79px;
+            }
+
+            .pname {
+                left: 602px;
+                bottom: -3580px;
+                margin: -1.33em 0;
+                right: -493px;
+            }
+
+            #myprojects {
+                font-size: 75px;
+            }
+
+            main > section:nth-child(4) > section > div {
+                position:unset;
+                transition: ease-out 0.3s;
+            }
+
+            main > section:nth-child(4) > section > div:nth-child(1) {
+                margin-left: 423px;
+            }
+
+            .ptxt {
+                font-size: 38px;
+            }
+
+            main > section:nth-child(4) > section > div:nth-child(2) {
+                margin-left: 423px;
+            }
+
+            main > section:nth-child(4) > section > div:nth-child(3) {
+                margin-left: 423px;
+            }
+
+
+        }
 
         /* project styling start*/
 
