@@ -636,7 +636,6 @@
         /*contact styling start*/
 
         main > section:nth-child(7) {
-            border: 1px solid green;
             background-color: white;
         }
 
@@ -655,35 +654,37 @@
             font-family: 'Crete Round', serif;
         }
 
-        .contacttxt{
+        .contacttxt {
             position: absolute;
             right: 41px;
+            margin-top: 33px;
         }
 
-        .txtcontact{
+        .txtcontact {
             font-size: 25px;
             font-weight: 600;
             font-family: 'Crete Round', serif;
         }
 
-        .txtname{
+        .txtname {
             overflow: visible;
-            width: 252px;
+            width: 389px;
             height: 25px;
         }
 
-        .txtsubject{
-            width: 645px;
+        .txtsubject {
+            width: 926px;
             height: 25px;
         }
-        .txtmassage{
+
+        .txtmassage {
             margin: 0px;
-            width: 613px;
-            height: 250px;
+            width: 893px;
+            height: 219px;
         }
 
-        .btn4{
-            margin-left: 631px;
+        .btn4 {
+            margin-left: 905px;
             left: 10px;
             height: 43px;
             width: 98px;
@@ -695,7 +696,7 @@
             border-radius: 23px;
         }
 
-        .btn4:hover{
+        .btn4:hover {
             color: black;
             cursor: pointer;
             background: none;
@@ -703,24 +704,38 @@
             border: 3px solid deepskyblue;
         }
 
-        /*.btn3 {
-            height: 65px;
-            width: 207px;
-            font-size: 25px;
-            color: white;
-            background-color: blue;
-            font-family: 'Crete Round', serif;
-            transition: ease-out 0.3s;
-            border-radius: 23px;
+       .social{
+           height: 64px;
+           margin-left: 163px;
+           margin-top: 47px;
+       }
+
+
+        #link{
+            margin-left: 125px;
+            font-size: 30px;
+            color: #ea78ff;
         }
 
-        .btn3:hover {
-            color: #e8e8e8;
-            cursor: pointer;
-            background: none;
-            outline: none;
-            border: 3px solid deepskyblue;
-        }*/
+        #link1{
+            height: 64px;
+            margin-left:173px;
+            margin-top: 47px;
+        }
+
+        #link2{
+            height: 64px;
+            margin-left: 167px;
+            margin-top: 47px;
+        }
+
+        #link3{
+            height: 64px;
+            margin-left: 167px;
+            margin-top: 47px;
+        }
+
+
 
     </style>
 
@@ -917,25 +932,34 @@
             <dfn id="contact">Contact</dfn>
         </h1>
         <form action="" class="contacttxt">
-            <label for="name" class="txtcontact">Your Name</label>
+            <label class="txtcontact" for="name">Your Name</label>
             <input class="txtname" id="name" placeholder="Your Name" type="text">
 
-            <label for="subject" class="txtcontact">Subjct</label>
+            <label class="txtcontact" for="subject">Subjct</label>
             <input class="txtname" id="subject" placeholder="Subject" type="text"><br><br><br>
 
-            <label for="email" class="txtcontact">Email</label>
+            <label class="txtcontact" for="email">Email</label>
             <input class="txtsubject" id="email" placeholder="Email" type="text"><br><br><br>
 
-            <label for="massage" class="txtcontact">Massage</label>
+            <label class="txtcontact" for="massage">Massage</label>
             <textarea class="txtmassage" id="massage" placeholder="Massage" type="text"></textarea><br><br><br>
 
             <button class="btn4" type="button">Submit</button>
         </form>
 
-        <aside>
-            <nav></nav>
-        </aside>
-
+        <div>
+            <img class="social" alt="There was an error loading.." src="assets/image/scol.png">
+        </div>
+        <b id="link">Social Links</b>
+        <div>
+            <img id="link1" alt="There was an error loading.." src="assets/image/link3.png">
+        </div>
+        <div>
+            <img id="link2" alt="There was an error loading.." src="assets/image/link1.png">
+        </div>
+        <div>
+            <img id="link3" alt="There was an error loading.." src="assets/image/link2.png">
+        </div>
         <section>
             <address></address>
         </section>
