@@ -2,7 +2,7 @@
 
 **<h2>#SiteMap</h1>**
 
-![Home Section Img](assets/image/gloomaps.png)
+![Home Section Img](assets/image/gloomaps.PNG)
 
 
 **<h2>#SiteMap</h1>**
