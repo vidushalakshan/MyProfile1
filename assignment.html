@@ -16,7 +16,7 @@
         }
 
 
-        section>div>img {
+        section:nth-child(1)>div>img {
             height: 88vh;
             width: 1536px;
         }
@@ -30,13 +30,13 @@
             font-size: 90px;
         }
 
-        section > section > div {
+        section:nth-child(1)> section > div {
             position: absolute;
             width: calc(100% / 3);
             transition: ease-out 0.3s;
         }
 
-         section> section > div:nth-child(1) {
+         section:nth-child(1)> section > div:nth-child(1) {
             left: 0;
             background-size: cover;
             margin-left: 35px;
@@ -44,7 +44,7 @@
             border-radius: 40px;
         }
 
-         section > section > div:nth-child(2) {
+         section:nth-child(1) > section > div:nth-child(2) {
             left: calc(100% / 3);
             background-size: cover;
             margin-left: 35px;
@@ -52,7 +52,7 @@
             border-radius: 40px;
         }
 
-      section > section > div:nth-child(3) {
+      section:nth-child(1)> section > div:nth-child(3) {
             left: calc((100% / 3) * 2);
             background-size: cover;
             margin-left: 35px;
@@ -66,6 +66,133 @@
             margin-top: 40px;
             border-radius: 78px;
         }
+
+        /*contact styling start*/
+
+        /*section:nth-child(2) {
+            background-color: white;
+        }
+
+      section:nth-child(2) > h1 {
+            margin: 1.67em 0;
+            text-align: center;
+            margin-bottom: 0px;
+            font-family: 'Crete Round', serif;
+        }*/
+
+        section:nth-child(2){
+            margin-top: 2114px;
+            background-color: white;
+        }
+
+        section:nth-child(2)>h1{
+            text-align: center;
+        }
+
+
+        #contact {
+            font-weight: 600;
+            font-style: normal;
+            font-size: 55px;
+            color: crimson;
+            font-family: 'Crete Round', serif;
+        }
+
+        .contacttxt {
+            position: absolute;
+            right: 41px;
+            margin-top: 33px;
+        }
+
+
+        .txtname {
+            overflow: visible;
+            width: 457px;
+            height: 25px;
+        }
+
+        .txtsubject {
+            width: 926px;
+            height: 25px;
+        }
+
+        .txtmassage {
+            margin: 0px;
+            width: 927px;
+            height: 219px;
+        }
+
+        .btn4 {
+            margin-left: 905px;
+            left: 10px;
+            height: 43px;
+            width: 98px;
+            font-size: 20px;
+            color: white;
+            background-color: #a71d1d;
+            font-family: 'Crete Round', serif;
+            transition: ease-out 0.3s;
+            border-radius: 23px;
+        }
+
+        .btn4:hover {
+            color: black;
+            cursor: pointer;
+            background: none;
+            outline: none;
+            border: 3px solid deepskyblue;
+        }
+
+        .social {
+            height: 64px;
+            margin-left: 163px;
+            margin-top: 47px;
+        }
+
+
+        #link {
+            margin-left: 125px;
+            font-size: 30px;
+            color: #ea78ff;
+            transform: scale(1.05);
+        }
+
+        #link1 {
+            height: 64px;
+            margin-left: 173px;
+            margin-top: 47px;
+        }
+
+        #link1:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+
+
+        #link2 {
+            height: 64px;
+            margin-left: 167px;
+            margin-top: 47px;
+        }
+
+        #link2:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+
+        #link3 {
+            height: 64px;
+            margin-left: 167px;
+            margin-top: 34px;
+        }
+
+        #link3:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+
+
+        /* End Styling contact*/
 
 
     </style>
@@ -108,21 +235,47 @@
     </section>
 
 </section>
-<!--<h1>Assignment</h1>-->
-
-<!--<section>
-    <div><a href="assets/myprojects/css/assignment1/index.html"><img class="img" src="assets/image/asssignment/ass1.PNG"> </a></div>
-    <div><a href="assets/myprojects/css/assignment2/index2.html"><img class="img" src="assets/image/asssignment/ass2.PNG"></a></div>
-    <div><a href="assets/myprojects/css/assignment3/index3.html"><img class="img" src="assets/image/asssignment/ass3.PNG"></a> </div>
-    <div><a href="assets/myprojects/css/assignment4/index.html"><img class="img" src="assets/image/asssignment/ass4.PNG"></a></div>
-</section>
-
 
 <section>
-    <div><a href="assets/myprojects/css/assignment5/index1.html"><img class="img" src="assets/image/asssignment/ass5.PNG"> </a></div>
-    <div><a href="assets/myprojects/css/assignment6/index1.html"><img class="img" src="assets/image/asssignment/ass6.PNG"></a> </div>
-    <div><a href="assets/myprojects/css/assignment7/index1.html"><img class="img"  src="assets/image/asssignment/ass7.PNG"></a> </div>
-    <div><a href="assets/myprojects/css/assignment8/index1.html"><img class="img" src="assets/image/asssignment/ass8.PNG"></a> </div>
-</section>-->
+    <h1>
+        <dfn id="contact">Contact</dfn>
+    </h1>
+    <form action="" class="contacttxt">
+        <!-- <label class="txtcontact" for="name">Your Name</label>-->
+        <input class="txtname" id="name" placeholder="Your Name" type="text">
+
+        <!--<label class="txtcontact" for="subject">Subjct</label>-->
+        <input class="txtname" id="subject" placeholder="Subject" type="text"><br><br><br>
+
+        <!--<label class="txtcontact" for="email">Email</label>-->
+        <input class="txtsubject" id="email" placeholder="Email" type="text"><br><br><br>
+
+        <!--  <label class="txtcontact" for="massage">Massage</label>-->
+        <textarea class="txtmassage" id="massage" placeholder="Massage" type="text"></textarea><br><br><br>
+
+        <button class="btn4" type="button">Submit</button>
+    </form>
+
+    <div>
+        <img alt="There was an error loading.." class="social" src="assets/image/scol.png">
+    </div>
+    <b id="link">Social Links</b>
+    <div>
+        <a href="https://www.linkedin.com/in/vidusha-lakshan-37351a225/"> <img alt="There was an error loading.."
+                                                                               id="link1"
+                                                                               src="assets/image/link3.png"></a>
+    </div>
+    <div>
+        <a href="https://www.facebook.com/vidusha.lakshan.100"> <img alt="There was an error loading.." id="link2"
+                                                                     src="assets/image/link1.png"></a>
+    </div>
+    <div>
+        <a href="https://twitter.com/Vidusha38054491"> <img alt="There was an error loading.." id="link3"
+                                                            src="assets/image/link2.png"></a>
+    </div>
+    <section>
+        <address></address>
+    </section>
+</section>
 </body>
 </html>
