@@ -61,7 +61,7 @@
 - Mockup : [Click Here](https://www.figma.com/proto/en9tSzED4lxyoQpUZKHgMg/Untitled?node-id=14%3A8&scaling=contain&page-id=0%3A1&starting-point-node-id=14%3A8)
 - Site Map : [Click Here](https://www.gloomaps.com/kcyVxYRceE)
 - Wireframe : [Click Here](https://wireframe.cc/ySUVm8)
-- GitHub : [Click Here](https://github.com/vidushalakshan)
+- GitHub : [Click Here](https://vidushalakshan.github.io/MyProfile1/)
 
 
 
