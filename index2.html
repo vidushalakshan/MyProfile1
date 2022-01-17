@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Assignment10</title>
-    <link href="../../../css/normalize.css" rel="stylesheet">
+    <link href="assets/css/normalize.css" rel="stylesheet">
 
     <style>
         section{
@@ -12,12 +12,12 @@
             position: relative;
         }
         section>div:nth-child(1){
-            background: url("../../../image/asssignment/sky.jpg");
+            background: url("assets/image/asssignment/sky.jpg");
             height: 407px;
         }
 
         section>div:nth-child(2){
-            background: url("../../../image/asssignment/city.png");
+            background: url("assets/image/asssignment/city.png");
             height: 250px;
             z-index: 1;
             position: relative;
@@ -25,10 +25,19 @@
         }
 
         section>div:nth-child(3){
-            background: url("../../../image/asssignment/road.jpg");
+            background: url("assets/image/asssignment/road.jpg");
             height: 43vh;
             position: relative;
             bottom: 246px;
+        }
+
+        .car{
+            position: relative;
+            bottom: 616px;
+            left: 530px;
+            width: 29vw;
+            height: 24vh;
+            z-index: 2;
         }
     </style>
 </head>
@@ -37,6 +46,9 @@
     <div></div>
     <div></div>
     <div></div>
+    <div >
+        <img class="car" src="assets/image/asssignment/car.png">
+    </div>
 </section>
 </body>
 </html>
