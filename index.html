@@ -224,6 +224,13 @@
         /*homr media start*/
 
         @media all and (max-device-width: 425px) {
+            main{
+                width: max-content;
+            }
+            #background {
+                background-color: #252525;
+            }
+
             .homeimage {
                 display: none;
             }
@@ -275,18 +282,26 @@
 
         }
         @media all and (max-device-width: 768px) {
-            #background {
-                width: 1385px;
+            main{
+                width: max-content;
             }
+            #background {
+                background-color: #252525;
+            }
+
+            header > nav > ul {
+                right: 36px;
+            }
+
 
             .homeimage {
                 position: absolute;
                 top: 135px;
                 bottom: 7px;
-                right: -607px;
+                right: -729px;
                 margin: auto;
-                height: 111vh;
-                width: 64vw;
+                height: 119vh;
+                width: 70vw;
             }
         }
 

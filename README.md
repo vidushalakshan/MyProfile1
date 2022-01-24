@@ -5,7 +5,7 @@
 ![Home Section Img](assets/image/gloomaps.PNG)
 
 
-**<h2>#SiteMap</h1>**
+**<h2>#Wireframe </h1>**
  **Home**
  ![Home Section Img](assets/image/sitemap/home.PNG)
 
