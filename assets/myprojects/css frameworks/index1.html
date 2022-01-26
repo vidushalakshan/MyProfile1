@@ -14,35 +14,49 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold" href="#"><img alt="" height="28"
-                                                          src="../../image/asssignment/framework/customer.png" width="35"> New Customer</a>
+                                                          src="../../image/asssignment/framework/customer.png"
+                                                          width="35"> New Customer</a>
         </div>
     </nav>
-    <section>
+    <section class="container">
         <div class="row">
             <div class="col-4"></div>
             <form class="col-md-4">
                 <div class="mb-3">
-                    <label class="form-label" for="inputId">Customer ID</label>
+                    <label class="form-label fw-bold" for="inputId">Customer ID</label>
                     <input aria-describedby="emailHelp" class="form-control" id="inputId" type="text">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="inputName">Customer Name</label>
+                    <label class="form-label fw-bold" for="inputName">Customer Name</label>
                     <input aria-describedby="emailHelp" class="form-control" id="inputName" type="text">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="inputAddress">Customer Address</label>
+                    <label class="form-label fw-bold" for="inputAddress">Customer Address</label>
                     <input aria-describedby="emailHelp" class="form-control" id="inputAddress" type="text">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label" for="inputSalary">Customer Salary</label>
+                    <label class="form-label fw-bold" for="inputSalary">Customer Salary</label>
                     <input aria-describedby="emailHelp" class="form-control" id="inputSalary" type="text">
                 </div>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button type="button" class="btn btn-outline-primary">Save</button>
-                <button type="button" class="btn btn-outline-warning">Renew</button>
-                <button type="button" class="btn btn-outline-info">close</button>
+                    <button class="btn btn-outline-primary" type="button">Save</button>
+                    <button class="btn btn-outline-warning" type="button">Renew</button>
+                    <button class="btn btn-outline-info" type="button">close</button>
                 </div>
             </form>
+        </div><br><br>
+        <div class="row col-md-12">
+            <table class="table">
+                <thead class="table-success">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Contact</th>
+                    <th scope="col">Email</th>
+                </tr>
+                </thead>
+            </table>
         </div>
     </section>
 </section>
