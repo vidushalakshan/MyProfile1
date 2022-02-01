@@ -11,12 +11,29 @@
 </head>
 <body>
 <section>
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="#"><img alt="" height="28"
-                                                          src="../../image/asssignment/framework/customer.png"
-                                                          width="35"> New Customer</a>
+            <a class="navbar-brand fw-bold fs-2 text text-white" href="#"> New Customer</a>
+            <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+                    data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-1 ">
+                    <li class="nav-item">
+                        <a aria-current="page" class="nav-link active text-white" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Item</a>
+                    </li>
+
+                </ul>
+            </div>
         </div>
+
     </nav>
     <section class="container">
         <div class="row">
@@ -44,7 +61,8 @@
                     <button class="btn btn-outline-info" type="button">close</button>
                 </div>
             </form>
-        </div><br><br>
+        </div>
+        <br><br>
         <div class="row col-md-12">
             <table class="table">
                 <thead class="table-success">
