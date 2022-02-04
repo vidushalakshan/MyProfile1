@@ -1,0 +1,48 @@
+.cover {
+    height: 189px;
+    width: 274px;
+    background-color: #d7d10b;
+    margin-left: 34px;
+    margin-top: 61px;
+    border-radius: 78px;
+}
+
+.font {
+    color: white;
+}
+
+.item {
+    margin-top: 108px;
+}
+
+.image {
+    height: 100px;
+    width: 100px;
+    margin-left: 83px;
+}
+
+.image2 {
+    margin-top: 7px;
+    margin-left: 89px;
+}
+
+.slid {
+    margin-top: 32px;
+}
+
+.order{
+    height: 67vh;
+    width: 20vw;
+}
+
+.order1{
+    margin-left: 98px;
+    margin-top: 134px;
+}
+.color{
+    background-color: #191919;
+}
+
+.color2{
+    background-color: #1C6DD0;
+}
