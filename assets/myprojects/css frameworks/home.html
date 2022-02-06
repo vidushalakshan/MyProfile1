@@ -11,9 +11,9 @@
     <link href="../../css/style/style.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light color2 ">
+<nav class="navbar navbar-expand-lg navbar-light color2">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold fs-2 text text-white" href="#" id="linkHome">Home</a>
+        <a class="navbar-brand fw-bold fs-2 text text-white" href="#" >Simple Pos</a>
         <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
                 class="navbar-toggler"
                 data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
@@ -21,6 +21,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-1 ">
+                <li class="nav-item">
+                    <a aria-current="page" class="nav-link active text-white" href="#" id="linkHome">Home</a>
+                </li>
                 <li class="nav-item">
                     <a aria-current="page" class="nav-link active text-white" href="#" id="linkItem">Item</a>
                 </li>
@@ -223,6 +226,18 @@
         $("#customer").css("display", "block");
         $("#home").css("display", "none");
         $("#item").css("display", "none");
+    });
+
+    $("#linkItem").click(function () {
+        $("#item").css("display", "block");
+        $("#customer").css("display", "none");
+        $("#home").css("display", "none");
+    });
+
+    $("#linkHome").click(function () {
+        $("#home").css("display", "block");
+        $("#item").css("display", "none");
+        $("#customer").css("display", "none");
     });
 </script>
 
