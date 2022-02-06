@@ -105,20 +105,24 @@
         <div class="col-1"></div>
         <form class="col-md-4">
             <div class="mb-3">
-                <label class="form-label fw-bold "for="inputId">Customer ID</label>
-                <input aria-describedby="emailHelp"  placeholder="Customer ID"  class="form-control" id="inputId" type="text">
+                <label class="form-label fw-bold " for="inputId">Customer ID</label>
+                <input aria-describedby="emailHelp" class="form-control" id="inputId" placeholder="Customer ID"
+                       type="text">
             </div>
             <div class="mb-3">
                 <label class="form-label fw-bold" for="inputName">Customer Name</label>
-                <input aria-describedby="emailHelp" placeholder="Customer Name"  class="form-control" id="inputName" type="text">
+                <input aria-describedby="emailHelp" class="form-control" id="inputName" placeholder="Customer Name"
+                       type="text">
             </div>
             <div class="mb-3">
                 <label class="form-label fw-bold" for="inputAddress">Customer Address</label>
-                <input aria-describedby="emailHelp" placeholder="Customer Address"  class="form-control" id="inputAddress" type="text">
+                <input aria-describedby="emailHelp" class="form-control" id="inputAddress"
+                       placeholder="Customer Address" type="text">
             </div>
             <div class="mb-3">
                 <label class="form-label fw-bold" for="inputSalary">Customer Salary</label>
-                <input aria-describedby="emailHelp" placeholder="Customer Salary"  class="form-control" id="inputSalary" type="text">
+                <input aria-describedby="emailHelp" class="form-control" id="inputSalary" placeholder="Customer Salary"
+                       type="text">
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <button class="btn btn-outline-primary" type="button">Save</button>
@@ -152,6 +156,65 @@
         </table>
     </div>
 </section>
+
+<!--Item Section-->
+
+<section class="container" id="item">
+    <div class="row">
+        <div class="col-1"></div>
+        <form class="col-md-4">
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="inputId">Item ID</label>
+                <input aria-describedby="emailHelp" class="form-control" id="inputId" placeholder="Item ID" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="inputName">Item Name</label>
+                <input aria-describedby="emailHelp" class="form-control" id="inputName" placeholder="Item Name"
+                       type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="inputAddress">Item Address</label>
+                <input aria-describedby="emailHelp" class="form-control" id="inputAddress" placeholder="Item Address"
+                       type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="inputSalary">Item Salary</label>
+                <input aria-describedby="emailHelp" class="form-control" id="inputSalary" placeholder="Item Salary"
+                       type="text">
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-outline-primary" type="button">Save</button>
+                <button class="btn btn-outline-warning" type="button">Renew</button>
+                <button class="btn btn-outline-info" type="button">close</button>
+            </div>
+        </form>
+        <div class="col-2"></div>
+        <div class="col-7 col-md-4">
+            <div class="shadow-sm pt-3 pb-5 px-3 py-3 mt-2">
+                <h1 class="h1 mb-3 fw-bold">Item Manage</h1>
+                <div class="mb-3">
+                    <label class="form-label" for="srcCusID">Search Item</label>
+                    <input class="form-control" id="srcCusID" placeholder="Item ID, Name" type="text">
+                </div>
+                <button class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row col-md-12">
+        <table class="table">
+            <thead class="table-success">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Salary</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</section>
+
 <script src="../../bootstrap/js/bootstrap.min.js"></script>
 <script src="../../jQuery/jquery-3.6.0.min.js"></script>
 
@@ -159,6 +222,7 @@
     $("#linkCustomer").click(function () {
         $("#customer").css("display", "block");
         $("#home").css("display", "none");
+        $("#item").css("display", "none");
     });
 </script>
 
