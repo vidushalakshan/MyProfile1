@@ -215,6 +215,9 @@
                 <th scope="col">Salary</th>
             </tr>
             </thead>
+            <tbody id="itemTable">
+
+            </tbody>
         </table>
     </div>
 </section>
@@ -255,6 +258,10 @@
         let itemSalary=$("#inputSalary").val();
 
         console.log(itemId,itemName,itemAddress,itemSalary);
+
+        let row= `<tr><td>${itemId}</td><td>${itemName}</td><td>${itemAddress}</td><td>${itemSalary}</td></tr>`;
+
+        $("#itemTable").append(row);
     });
 </script>
 
