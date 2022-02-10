@@ -11,9 +11,9 @@
     <link href="../../css/style/style.css" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light color2">
+<nav class="navbar navbar-expand-lg navbar-light color2 ">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold fs-2 text text-white" href="#" >Simple Pos</a>
+        <a class="navbar-brand fw-bold fs-2 text text-white" href="#" >Hotel Pos</a>
         <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
                 class="navbar-toggler"
                 data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
@@ -39,6 +39,7 @@
 </nav>
 
 <!--home section-->
+
 <section class="row mt-4 container-fluid " id="home">
     <div class="col-3">
         <div class="cover">
@@ -109,22 +110,22 @@
         <form class="col-md-4">
             <div class="mb-3">
                 <label class="form-label fw-bold " for="inputId">Customer ID</label>
-                <input aria-describedby="emailHelp" class="form-control" id="inputId" placeholder="Customer ID"
+                <input aria-describedby="emailHelp" class="form-control" id="inputI" placeholder="Customer ID"
                        type="text">
             </div>
             <div class="mb-3">
                 <label class="form-label fw-bold" for="inputName">Customer Name</label>
-                <input aria-describedby="emailHelp" class="form-control" id="inputName" placeholder="Customer Name"
+                <input aria-describedby="emailHelp" class="form-control" id="inputNam" placeholder="Customer Name"
                        type="text">
             </div>
             <div class="mb-3">
                 <label class="form-label fw-bold" for="inputAddress">Customer Address</label>
-                <input aria-describedby="emailHelp" class="form-control" id="inputAddress"
+                <input aria-describedby="emailHelp" class="form-control" id="inputAddres"
                        placeholder="Customer Address" type="text">
             </div>
             <div class="mb-3">
                 <label class="form-label fw-bold" for="inputSalary">Customer Salary</label>
-                <input aria-describedby="emailHelp" class="form-control" id="inputSalary" placeholder="Customer Salary"
+                <input aria-describedby="emailHelp" class="form-control" id="inputSalar" placeholder="Customer Salary"
                        type="text">
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -139,7 +140,7 @@
                 <h1 class="h1 mb-3 fw-bold">Customer Manage</h1>
                 <div class="mb-3">
                     <label class="form-label" for="srcCusID">Search Item</label>
-                    <input class="form-control" id="srcCusID" placeholder="Customer ID, Name" type="text">
+                    <input class="form-control" id="srcCusI" placeholder="Customer ID, Name" type="text">
                 </div>
                 <button class="btn btn-primary">Search</button>
             </div>
@@ -186,7 +187,7 @@
                        type="text">
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-outline-primary" type="button">Save</button>
+                <button class="btn btn-outline-primary" type="button" id="btnSave">Save</button>
                 <button class="btn btn-outline-warning" type="button">Renew</button>
                 <button class="btn btn-outline-info" type="button">close</button>
             </div>
@@ -222,6 +223,11 @@
 <script src="../../jQuery/jquery-3.6.0.min.js"></script>
 
 <script>
+
+    $("#item").css("display", "none");
+    $("#customer").css("display", "none");
+    $("#home").css("display", "");
+
     $("#linkCustomer").click(function () {
         $("#customer").css("display", "block");
         $("#home").css("display", "none");
@@ -235,9 +241,20 @@
     });
 
     $("#linkHome").click(function () {
-        $("#home").css("display", "block");
+        $("#home").css("display", "");
         $("#item").css("display", "none");
         $("#customer").css("display", "none");
+    });
+
+  /*  Item section*/
+
+    $("#btnSave").click(function () {
+        let itemId= $("#inputId").val();
+        let itemName=$("#inputName").val();
+        let itemAddress=$("#inputAddress").val();
+        let itemSalary=$("#inputSalary").val();
+
+        console.log(itemId,itemName,itemAddress,itemSalary);
     });
 </script>
 
