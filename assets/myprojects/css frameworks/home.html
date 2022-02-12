@@ -206,7 +206,7 @@
     </div>
     <br><br>
     <div class="row col-md-12">
-        <table class="table">
+        <table class="table table-hover">
             <thead class="table-success">
             <tr>
                 <th scope="col">ID</th>
@@ -216,7 +216,6 @@
             </tr>
             </thead>
             <tbody id="itemTable">
-
             </tbody>
         </table>
     </div>
@@ -262,7 +261,21 @@
         let row= `<tr><td>${itemId}</td><td>${itemName}</td><td>${itemAddress}</td><td>${itemSalary}</td></tr>`;
 
         $("#itemTable").append(row);
+
+        $("#itemTable>tr").click(function () {
+            let id=$(this).children(":eq(0)").text();
+            let name=$(this).children(":eq(1)").text();
+            let address=$(this).children(":eq(2)").text();
+            let salary=$(this).children(":eq(3)").text();
+
+            $("#inputId").val(id);
+            $("#inputName").val(name);
+            $("#inputAddress").val(address);
+            $("#inputSalary").val(salary);
+
+        })
     });
+
 </script>
 
 </body>
