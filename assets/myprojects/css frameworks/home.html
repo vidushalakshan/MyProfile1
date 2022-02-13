@@ -129,7 +129,7 @@
                        type="text">
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-outline-primary" type="button">Save</button>
+                <button class="btn btn-outline-primary" type="button" id="btnCustomerSave">Save</button>
                 <button class="btn btn-outline-warning" type="button">Renew</button>
                 <button class="btn btn-outline-info" type="button">close</button>
             </div>
@@ -157,6 +157,9 @@
                 <th scope="col">Salary</th>
             </tr>
             </thead>
+            <tbody id="tblCustomer">
+
+            </tbody>
         </table>
     </div>
 </section>
@@ -177,13 +180,13 @@
                        type="text">
             </div>
             <div class="mb-3">
-                <label class="form-label fw-bold" for="inputAddress">Item Address</label>
-                <input aria-describedby="emailHelp" class="form-control" id="inputAddress" placeholder="Item Address"
+                <label class="form-label fw-bold" for="inputAddress">Item Price</label>
+                <input aria-describedby="emailHelp" class="form-control" id="inputAddress" placeholder="Item Price"
                        type="text">
             </div>
             <div class="mb-3">
-                <label class="form-label fw-bold" for="inputSalary">Item Salary</label>
-                <input aria-describedby="emailHelp" class="form-control" id="inputSalary" placeholder="Item Salary"
+                <label class="form-label fw-bold" for="inputSalary">Item Quantity</label>
+                <input aria-describedby="emailHelp" class="form-control" id="inputSalary" placeholder="Item Quantity"
                        type="text">
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -273,9 +276,23 @@
             $("#inputAddress").val(address);
             $("#inputSalary").val(salary);
 
-        })
+        });
     });
 
+   /* item section end*/
+
+  /*  start customer section*/
+
+    $("#btnCustomerSave").click(function () {
+
+        let customerID=$("#inputI").val();
+        let customerName=$("#inputNam").val();
+        let customerAddress=$("#inputAddres").val();
+        let customerSalary=$("#inputSalar").val();
+
+        let row=`<tr><td>${customerID}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerSalary}</td>`
+        $("#tblCustomer").append(row);
+    });
 </script>
 
 </body>
