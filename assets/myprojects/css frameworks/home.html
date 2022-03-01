@@ -13,7 +13,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light color2 ">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold fs-2 text text-white" href="#" >Hotel Pos</a>
+        <a class="navbar-brand fw-bold fs-2 text text-white" href="#">Hotel Pos</a>
         <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
                 class="navbar-toggler"
                 data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
@@ -129,7 +129,7 @@
                        type="text">
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-outline-primary" type="button" id="btnCustomerSave">Save</button>
+                <button class="btn btn-outline-primary" id="btnCustomerSave" type="button">Save</button>
                 <button class="btn btn-outline-warning" type="button">Renew</button>
                 <button class="btn btn-outline-info" type="button">close</button>
             </div>
@@ -158,7 +158,6 @@
             </tr>
             </thead>
             <tbody id="tblCustomer">
-
             </tbody>
         </table>
     </div>
@@ -190,7 +189,7 @@
                        type="text">
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-outline-primary" type="button" id="btnSave">Save</button>
+                <button class="btn btn-outline-primary" id="btnSave" type="button">Save</button>
                 <button class="btn btn-outline-warning" type="button">Renew</button>
                 <button class="btn btn-outline-info" type="button">close</button>
             </div>
@@ -251,25 +250,28 @@
         $("#customer").css("display", "none");
     });
 
-  /*  Item section*/
+    /*  Item section*/
 
     $("#btnSave").click(function () {
-        let itemId= $("#inputId").val();
-        let itemName=$("#inputName").val();
-        let itemAddress=$("#inputAddress").val();
-        let itemSalary=$("#inputSalary").val();
+        let itemId = $("#inputId").val();
+        let itemName = $("#inputName").val();
+        let itemAddress = $("#inputAddress").val();
+        let itemSalary = $("#inputSalary").val();
 
-        console.log(itemId,itemName,itemAddress,itemSalary);
+        console.log(itemId, itemName, itemAddress, itemSalary);
 
-        let row= `<tr><td>${itemId}</td><td>${itemName}</td><td>${itemAddress}</td><td>${itemSalary}</td></tr>`;
+        let row = `<tr><td>${itemId}</td><td>${itemName}</td><td>${itemAddress}</td><td>${itemSalary}</td></tr>`;
 
         $("#itemTable").append(row);
 
+        $("#itemTable>tr").off();
+
         $("#itemTable>tr").click(function () {
-            let id=$(this).children(":eq(0)").text();
-            let name=$(this).children(":eq(1)").text();
-            let address=$(this).children(":eq(2)").text();
-            let salary=$(this).children(":eq(3)").text();
+            let id = $(this).children(":eq(0)").text();
+            let name = $(this).children(":eq(1)").text();
+            let address = $(this).children(":eq(2)").text();
+            let salary = $(this).children(":eq(3)").text();
+            console.log(id, name, address, salary);
 
             $("#inputId").val(id);
             $("#inputName").val(name);
@@ -279,20 +281,25 @@
         });
     });
 
-   /* item section end*/
+    /* item section end*/
 
-  /*  start customer section*/
+    /*  start customer section*/
 
     $("#btnCustomerSave").click(function () {
 
-        let customerID=$("#inputI").val();
-        let customerName=$("#inputNam").val();
-        let customerAddress=$("#inputAddres").val();
-        let customerSalary=$("#inputSalar").val();
+        let customerID = $("#inputI").val();
+        let customerName = $("#inputNam").val();
+        let customerAddress = $("#inputAddres").val();
+        let customerSalary = $("#inputSalar").val();
 
-        let row=`<tr><td>${customerID}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerSalary}</td>`
+        let row = `<tr><td>${customerID}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerSalary}</td>`
         $("#tblCustomer").append(row);
+
+        $("#tblCustomer>tr").dblclick(function () {
+            $(this).remove();
+        });
     });
+
 </script>
 
 </body>
