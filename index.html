@@ -714,7 +714,8 @@
         main > section:nth-child(4) > section > div {
             position: absolute;
             width: calc(100% / 3);
-            transition: ease-out 0.3s;
+            border-radius: 70px;
+            overflow: hidden;
         }
 
         main > section:nth-child(4) > section > div:nth-child(1) {
@@ -722,7 +723,6 @@
             background-size: cover;
             margin-left: 35px;
             width: 415px;
-            border-radius: 40px;
         }
 
         main > section:nth-child(4) > section > div:nth-child(2) {
@@ -730,7 +730,6 @@
             background-size: cover;
             margin-left: 35px;
             width: 415px;
-            border-radius: 40px;
         }
 
         main > section:nth-child(4) > section > div:nth-child(3) {
@@ -738,23 +737,57 @@
             background-size: cover;
             margin-left: 35px;
             width: 415px;
-            border-radius: 40px;
         }
 
         .pimg {
-            width: 415px;
+            width: 100%;
+            display: block;
+            overflow: hidden;
         }
 
         main > section:nth-child(4) > section > div:hover {
             cursor: pointer;
             /*background-color: #ba0b2e;*/
-            transform: scale(1.05);
         }
 
         .ptxt {
             text-align: center;
             color: white;
             font-family: 'Crete Round', serif;
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+            overflow: hidden;
+            border-radius: 40px;
+        }
+
+        .ptxt:hover{
+            background: #343434;
+            box-shadow: rgb(154, 145, 145) 8px 6px 12px;
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .ptxt h2{
+            width: 100%;
+            font-width: 500;
+            color: #fdfdfd;
+            font-size: 26px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            opacity:  0.05;
+            transition: 0.5s;
+        }
+
+        .ptxt:hover h2{
+            bottom: 49%;
+            opacity:2;
         }
 
         main > section:nth-child(4) > div {
@@ -1433,15 +1466,15 @@
             <div>
                 <a href="https://github.com/vidushalakshan/SuperMarket-LayeredArchitecture-"><img
                         alt="There was an error loading this image.." class="pimg" src="assets/image/project1.png"></a>
-                <h2 class="ptxt">Blue Ocean Hotel</h2>
+                <div class="ptxt"><h2>Blue Ocean Hotel</h2></div>
             </div>
             <div>
                 <img alt="There was an error loading this image.." class="pimg" src="assets/image/project2.png">
-                <h2 class="ptxt">Book Shop</h2>
+                <div class="ptxt"><h2>Book Shop</h2></div>
             </div>
             <div>
                 <img alt="There was an error loading this image.." class="pimg" src="assets/image/project3.png">
-                <h2 class="ptxt">Super Market</h2>
+                <div class="ptxt"><h2>Super Market</h2></div>
             </div>
         </section>
         <div>
