@@ -10,7 +10,15 @@
 
     <link href="assets/css/normalize.css" rel="stylesheet">
     <style>
+
+
         /*navbar Styling start*/
+
+        .bar .sticky {
+            padding: 2px 0;
+            background: #b8b8b5;
+            transition: all 0.3s ease;
+        }
         header {
             position: fixed;
             height: 62px;
@@ -20,7 +28,7 @@
             margin-top: -17px;
         }
 
-        header > h1 {
+        header> section> h1 {
             font-size: 55px;
             display: inline;
             color: white;
@@ -31,7 +39,7 @@
             letter-spacing: 7px;
         }
 
-        header > nav > ul {
+        header > section>nav> ul {
             position: absolute;
             right: 25px;
             bottom: -21px;
@@ -44,15 +52,26 @@
             font-family: 'Crete Round', serif;
         }
 
-        header > nav > ul > li {
+        header >section> nav > ul > li {
             display: inline;
             text-decoration-line: none;
             padding: 0 10px 0 10px;
         }
 
-        header > nav > ul > li > a {
+        header> section > nav > ul > li > a {
             text-decoration-line: none;
             color: white;
+        }
+
+        #logo {
+            transition: color 0.4s ease;
+            transform: rotate(90deg);
+            letter-spacing: -3.5px;
+        }
+
+        #logo > span {
+            color: black;
+            transition: color 0.4s ease;
         }
 
 
@@ -101,7 +120,7 @@
         }
 
         #background {
-           /* background-color: #020249;*/
+            /* background-color: #020249;*/
             background: url("assets/image/asssignment/homes.jpg");
             background-size: cover;
         }
@@ -149,8 +168,8 @@
             bottom: 0;
             right: 0;
             margin: auto;
-            height: 97vh;
-            width: 36vw;
+            height: 94vh;
+            width: 35vw;
         }
 
         .btn1 {
@@ -365,6 +384,7 @@
         }
 
         .aboutmemain {
+            position: relative;
             text-align: center;
             margin-top: 20px;
         }
@@ -380,7 +400,7 @@
         .detail {
             position: absolute;
             right: 48px;
-            bottom: -651px;
+            bottom: -596px;
             margin: auto;
             font-size: 32px;
             font-weight: bold;
@@ -392,7 +412,7 @@
             height: 63vh;
             width: 32vw;
             margin-left: 41px;
-            margin-top: 49px;
+            margin-top: 39px;
         }
 
         .aboutedu {
@@ -765,14 +785,14 @@
             border-radius: 40px;
         }
 
-        .ptxt:hover{
+        .ptxt:hover {
             background: #343434;
             box-shadow: rgb(154, 145, 145) 8px 6px 12px;
             opacity: 0.8;
             cursor: pointer;
         }
 
-        .ptxt h2{
+        .ptxt h2 {
             width: 100%;
             font-width: 500;
             color: #fdfdfd;
@@ -781,13 +801,13 @@
             left: 50%;
             transform: translateX(-50%);
             position: absolute;
-            opacity:  0.05;
+            opacity: 0.05;
             transition: 0.5s;
         }
 
-        .ptxt:hover h2{
+        .ptxt:hover h2 {
             bottom: 49%;
-            opacity:2;
+            opacity: 2;
         }
 
         main > section:nth-child(4) > div {
@@ -1340,21 +1360,22 @@
 <body>
 
 <header>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#aboutme">About Me</a></li>
-            <li><a href="#skil">Skils</a></li>
-            <li><a href="#myprojects">My Projects</a></li>
-            <li><a href="#myservice">My Service</a></li>
-            <li><a href="#favourite">Favourite</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <h1>VL</h1>
-    <!-- close navbar-->
+    <section class="bar">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#aboutme">About Me</a></li>
+                <li><a href="#skil">Skils</a></li>
+                <li><a href="#myprojects">My Projects</a></li>
+                <li><a href="#myservice">My Service</a></li>
+                <li><a href="#favourite">Favourite</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1 id="logo">V<span>L</span></h1>
+    </section>
 </header>
-
+<!-- close navbar-->
 
 <main>
     <section id="background">
@@ -1594,5 +1615,19 @@
     <!--End footer section-->
 
 </main>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if (this.scrollY > 20) {
+                $('.bar').addClass("sticky");
+            } else {
+                $('.bar').removeClass("sticky");
+            }
+        })
+    });
+</script>
 </body>
 </html>
