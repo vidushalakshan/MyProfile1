@@ -28,6 +28,15 @@ function loadAllCustomer() {
 $("#btnCustomerSave").click(function () {
     CustomerSave();
     loadAllCustomer();
+    clearAll();
 });
+
+function clearAll() {
+    $('#inputI,#inputNam,#inputAddres,#inputSalar').val("");
+    $('#inputI').focus();
+    $("#btnCustomerSave").attr('disabled', true);
+    loadAllCustomer();
+}
+
 
 
