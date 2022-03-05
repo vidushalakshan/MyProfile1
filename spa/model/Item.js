@@ -1,34 +1,34 @@
-function Item(code,name,qty,price) {
-    let __code=code;
-    let __name=name;
-    let __qty=qty;
-    let __price=price;
+function Item(code, name, qty, price) {
+    let __code = code;
+    let __name = name;
+    let __qty = qty;
+    let __price = price;
 
-    this.getCode=function () {
+    this.getCode = function () {
         return __code;
     }
-    this.setCode=function (code) {
-        __code=code;
+    this.setCode = function (code) {
+        __code = code;
     }
 
-    this.getName=function () {
+    this.getName = function () {
         return name;
     }
-    this.setName=function (name) {
-        __name=name;
+    this.setName = function (name) {
+        __name = name;
     }
 
-    this.getQty=function () {
-        __qty=qty;
+    this.getQty = function () {
+        __qty = qty;
     }
-    this.setQty=function (qty) {
-        __qty=qty;
+    this.setQty = function (qty) {
+        __qty = qty;
     }
 
-    this.getPrice=function () {
+    this.getPrice = function () {
         return price;
     }
-    this.setPrice=function (price) {
-        __price=price;
+    this.setPrice = function (price) {
+        __price = price;
     }
 }
