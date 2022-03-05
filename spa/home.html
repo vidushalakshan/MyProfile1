@@ -225,34 +225,23 @@
 
 <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="../assets/jQuery/jquery-3.6.0.min.js"></script>
+<script src="controller/CustomerController.js"></script>
+<script src="controller/ItemController.js.js"></script>
+<script src="controller/OrderController.js.js"></script>
+<script src="controller/PlaceOrderController.js.js"></script>
+<script src="db/DB.js"></script>
+<script src="model/Customer.js"></script>
+<script src="model/Item.js"></script>
+<script src="model/Orders.js"></script>
+<script src="model/OrderDetails.js"></script>
+<script src="assests/script.js"></script>
 
 <script>
 
-    $("#item").css("display", "none");
-    $("#customer").css("display", "none");
-    $("#home").css("display", "");
-
-    $("#linkCustomer").click(function () {
-        $("#customer").css("display", "block");
-        $("#home").css("display", "none");
-        $("#item").css("display", "none");
-    });
-
-    $("#linkItem").click(function () {
-        $("#item").css("display", "block");
-        $("#customer").css("display", "none");
-        $("#home").css("display", "none");
-    });
-
-    $("#linkHome").click(function () {
-        $("#home").css("display", "");
-        $("#item").css("display", "none");
-        $("#customer").css("display", "none");
-    });
 
     /*  Item section*/
 
-    $("#btnSave").click(function () {
+   /* $("#btnSave").click(function () {
         let itemId = $("#inputId").val();
         let itemName = $("#inputName").val();
         let itemAddress = $("#inputAddress").val();
@@ -281,9 +270,9 @@
         });
     });
 
-    /* item section end*/
+    /!* item section end*!/
 
-    /*  start customer section*/
+    /!*  start customer section*!/
 
     $("#btnCustomerSave").click(function () {
 
@@ -298,7 +287,7 @@
         $("#tblCustomer>tr").dblclick(function () {
             $(this).remove();
         });
-    });
+    });*/
 
 </script>
 
