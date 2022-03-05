@@ -29,6 +29,7 @@ function loadAllCustomer() {
 $("#btnCustomerSave").click(function () {
     CustomerSave();
     loadAllCustomer();
+    checkIfValid();
     clearAll();
 });
 
@@ -57,7 +58,6 @@ $('#inputI,#inputNam,#inputAddres,#inputSalar').on('blur', function () {
     formValid();
 });
 
-//focusing events
 $("#inputI").on('keyup', function (eventOb) {
     setButton();
     if (eventOb.key == "Enter") {
@@ -182,8 +182,29 @@ function setButton() {
     }
 }
 
-$('#btnCustomerSave').click(function () {
-    checkIfValid();
+/*search Customer*/
+
+$("#btnSearch").click(function () {
+    var searchID = $("#srcCusI").val();
+    var r = searchCustomer(searchID);
+    if (r) {
+        $("#inputI").val(r.id);
+        $("#inputNam").val(r.name);
+        $("#inputAddres").val(r.address);
+        $("#inputSalar").val(r.salary);
+    }else{
+        clearAll();
+        alert("No Such a Customer");
+    }
 });
+
+function searchCustomer(id) {
+    for (let i = 0; i < customerTable.length; i++) {
+        if (customerTable[i].id == id) {
+            return customerTable[i];
+        }
+    }
+}
+
 
 
