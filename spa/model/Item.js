@@ -11,10 +11,10 @@ function Item(code, name, qty, price) {
         __code = code;
     }
 
-    this.getName = function () {
+    this.getItemName = function () {
         return name;
     }
-    this.setName = function (name) {
+    this.setItemName = function (name) {
         __name = name;
     }
 
