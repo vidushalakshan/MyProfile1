@@ -1,5 +1,4 @@
 /*item save*/
-/*
 function ItemSave() {
     let id = $("#inputId").val();
     let name = $("#inputName").val();
@@ -23,11 +22,9 @@ function loadAllItem() {
     }
 }
 
-$("#btnSave").click(function () {
-    console.log("hellow");
-    ItemSave();
+$("#btnItemSave").click(function () {
     loadAllItem();
-   /!* checkIfValid();*!/
+    checkIfValid();
     clearAll();
 });
 
@@ -37,7 +34,6 @@ function clearAll() {
     $("#btnSave").attr('disabled', true);
     loadAllItem();
 }
-*/
 
 
 /*validation*/
