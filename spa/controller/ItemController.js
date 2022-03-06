@@ -177,3 +177,27 @@ function setButton() {
         $("#btnItemSave").attr('disabled', true);
     }
 }
+
+/*search Customer*/
+
+$("#btnItemSearch").click(function () {
+    var searchID = $("#srcItemID").val();
+    var k= searchItem(searchID);
+    if (k) {
+        $("#inputId").val(k.id);
+        $("#inputName").val(k.name);
+        $("#inputPrice").val(k.price);
+        $("#inputQty").val(k.qty);
+    } else {
+        clearAll();
+        alert("No Such a Item");
+    }
+});
+
+function searchItem(id) {
+    for (let i = 0; i < itemTable.length; i++) {
+        if (itemTable[i].id == id) {
+            return itemTable[i];
+        }
+    }
+}
