@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Javascript Queue</title>
-    <link rel="stylesheet" href="bootstrap/css">
+    <link href="bootstrap/css" rel="stylesheet">
 
     <style>
-        body>main{
+        body > main {
             position: relative;
             background-color: black;
             height: 100vh;
             width: 100%;
         }
-        body>main>div:nth-child(1) {
+
+        body > main > div:nth-child(1) {
             position: absolute;
             left: 0;
             right: 0;
@@ -25,7 +26,7 @@
             background-color: white;
         }
 
-        body>main>div:nth-child(2) {
+        body > main > div:nth-child(2) {
             position: absolute;
             left: 0;
             right: 0;
@@ -70,13 +71,14 @@
             flex-direction: row;
         }
 
-        .container>div {
+        .container > div {
             position: relative;
-            width: calc(100%/4);
+            width: calc(100% / 4);
             margin-left: 5%;
             border: 1px solid white;
         }
-        body>main>.btnContainer {
+
+        body > main > .btnContainer {
             left: 960px;
             right: 0;
             top: 0;
@@ -87,7 +89,7 @@
             display: flex;
         }
 
-        #btnStart{
+        #btnStart {
             height: 52px;
             width: 125px;
             background-color: green;
@@ -96,7 +98,7 @@
             cursor: pointer;
         }
 
-        #btnStop{
+        #btnStop {
             height: 52px;
             width: 125px;
             background-color: red;
@@ -127,6 +129,88 @@
             <button class="btn-danger w-100 border-0 end-0" id="btnStop">Stop</button>
         </div>
     </div>
+    <script src="jQuery/jquery-3.6.0.min.js"></script>
+    <script>
+        var firstBox = $('#one');
+        var secondBox = $('#two');
+        var thirdBox = $('#three');
+        var fourthBox = $('#four');
+        var fifthBox = $('#five');
+        var sixthBox = $('#six');
+        var start = $('#btnStart');
+        var stop = $('#btnStop');
+        var timerId;
+        var arr = [firstBox, secondBox, thirdBox, fourthBox, fifthBox, sixthBox];
+
+        start.click(function () {
+            clearInterval(timerId);
+            timerId = setInterval(setColors, 1000);
+
+            stop.click(function () {
+                clearInterval(timerId);
+            })
+        });
+
+        var k = 0;
+
+        function setColors() {
+            if (k == 0) {
+                arr[0].css("backgroundColor", "red");
+                arr[1].css("backgroundColor", "green");
+                arr[2].css("backgroundColor", "blue");
+                arr[3].css("backgroundColor", "yellow");
+                arr[4].css("backgroundColor", "violet");
+                arr[5].css("backgroundColor", "purple");
+                k++;
+
+            } else if (k == 1) {
+                arr[0].css("backgroundColor", "purple");
+                arr[1].css("backgroundColor", "red");
+                arr[2].css("backgroundColor", "green");
+                arr[3].css("backgroundColor", "blue");
+                arr[4].css("backgroundColor", "yellow");
+                arr[5].css("backgroundColor", "violet");
+                k++;
+
+            } else if (k == 2) {
+                arr[0].css("backgroundColor", "violet");
+                arr[1].css("backgroundColor", "purple");
+                arr[2].css("backgroundColor", "red");
+                arr[3].css("backgroundColor", "green");
+                arr[4].css("backgroundColor", "blue");
+                arr[5].css("backgroundColor", "yellow");
+                k++;
+
+            } else if (k == 3) {
+                arr[0].css("backgroundColor", "yellow");
+                arr[1].css("backgroundColor", "violet");
+                arr[2].css("backgroundColor", "purple");
+                arr[3].css("backgroundColor", "red");
+                arr[4].css("backgroundColor", "green");
+                arr[5].css("backgroundColor", "blue");
+                k++;
+
+            } else if (k == 4) {
+                arr[0].css("backgroundColor", "blue");
+                arr[1].css("backgroundColor", "yellow");
+                arr[2].css("backgroundColor", "violet");
+                arr[3].css("backgroundColor", "purple");
+                arr[4].css("backgroundColor", "red");
+                arr[5].css("backgroundColor", "green");
+                k++;
+
+            } else if (k == 5) {
+                arr[0].css("backgroundColor", "green");
+                arr[1].css("backgroundColor", "blue");
+                arr[2].css("backgroundColor", "yellow");
+                arr[3].css("backgroundColor", "violet");
+                arr[4].css("backgroundColor", "purple");
+                arr[5].css("backgroundColor", "red");
+                k = 0;
+
+            }
+        }
+    </script>
 </main>
 </body>
 </html>
