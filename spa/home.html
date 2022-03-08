@@ -28,7 +28,7 @@
                     <a aria-current="page" class="nav-link active text-white" href="#" id="linkItem">Item</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#" id="linkOrder">Order</a>
+                    <a class="nav-link text-white" href="#" id="linkOrder" id="linkOrder">Order</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#" id="linkCustomer">Customer</a>
@@ -235,7 +235,7 @@
 Order section
 -->
 
-<section class="container-fluid">
+<section class="container-fluid" id="order">
     <section class="row mt-3">
 
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4">
@@ -435,61 +435,5 @@ Order section
 <script src="model/Orders.js"></script>
 <script src="model/OrderDetails.js"></script>
 <script src="assests/script.js"></script>
-
-<script>
-
-
-    /*  Item section*/
-
-    /* $("#btnSave").click(function () {
-         let itemId = $("#inputId").val();
-         let itemName = $("#inputName").val();
-         let itemAddress = $("#inputAddress").val();
-         let itemSalary = $("#inputSalary").val();
-
-         console.log(itemId, itemName, itemAddress, itemSalary);
-
-         let row = `<tr><td>${itemId}</td><td>${itemName}</td><td>${itemAddress}</td><td>${itemSalary}</td></tr>`;
-
-         $("#itemTable").append(row);
-
-         $("#itemTable>tr").off();
-
-         $("#itemTable>tr").click(function () {
-             let id = $(this).children(":eq(0)").text();
-             let name = $(this).children(":eq(1)").text();
-             let address = $(this).children(":eq(2)").text();
-             let salary = $(this).children(":eq(3)").text();
-             console.log(id, name, address, salary);
-
-             $("#inputId").val(id);
-             $("#inputName").val(name);
-             $("#inputAddress").val(address);
-             $("#inputSalary").val(salary);
-
-         });
-     });
-
-     /!* item section end*!/
-
-     /!*  start customer section*!/
-
-     $("#btnCustomerSave").click(function () {
-
-         let customerID = $("#inputI").val();
-         let customerName = $("#inputNam").val();
-         let customerAddress = $("#inputAddres").val();
-         let customerSalary = $("#inputSalar").val();
-
-         let row = `<tr><td>${customerID}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerSalary}</td>`
-         $("#tblCustomer").append(row);
-
-         $("#tblCustomer>tr").dblclick(function () {
-             $(this).remove();
-         });
-     });*/
-
-</script>
-
 </body>
 </html>

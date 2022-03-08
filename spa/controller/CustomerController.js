@@ -1,23 +1,20 @@
 /*customer save*/
-
-
 function CustomerSave() {
     if ( $("#inputI").val() !==this) {
-        let id = $("#inputI").val();
+        let itemId = $("#inputI").val();
         let name = $("#inputNam").val();
         let address = $("#inputAddres").val();
         let salary = $("#inputSalar").val();
 
         var CustomerObject = {
-            id: id,
+            ItemID: itemId,
             name: name,
             address: address,
             salary: salary
         };
-
+        cmbCustomers("<option>"+itemId+"</option>");
         customerTable.push(CustomerObject);
     }
-
 }
 
 function loadAllCustomer() {
