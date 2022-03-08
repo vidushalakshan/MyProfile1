@@ -2,19 +2,21 @@
 
 
 function CustomerSave() {
-    let id = $("#inputI").val();
-    let name = $("#inputNam").val();
-    let address = $("#inputAddres").val();
-    let salary = $("#inputSalar").val();
+    if ( $("#inputI").val() !==this) {
+        let id = $("#inputI").val();
+        let name = $("#inputNam").val();
+        let address = $("#inputAddres").val();
+        let salary = $("#inputSalar").val();
 
-    var CustomerObject = {
-        id: id,
-        name: name,
-        address: address,
-        salary: salary
-    };
+        var CustomerObject = {
+            id: id,
+            name: name,
+            address: address,
+            salary: salary
+        };
 
-    customerTable.push(CustomerObject);
+        customerTable.push(CustomerObject);
+    }
 
 }
 

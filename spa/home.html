@@ -143,8 +143,8 @@
             <div class="shadow-sm pt-3 pb-5 px-3 py-3 mt-2">
                 <h1 class="h1 mb-3 fw-bold">Customer Manage</h1>
                 <div class="mb-3">
-                    <label class="form-label" for="srcCusI" >Search Customer</label>
-                    <input class="form-control" id="srcCusI"  placeholder="Customer ID" type="text">
+                    <label class="form-label" for="srcCusI">Search Customer</label>
+                    <input class="form-control" id="srcCusI" placeholder="Customer ID" type="text">
                 </div>
                 <button class="btn btn-primary" id="btnSearch">Search</button>
             </div>
@@ -231,6 +231,198 @@
     </div>
 </section>
 
+<!--
+Order section
+-->
+
+<section class="container-fluid">
+    <section class="row mt-3">
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4">
+            <form>
+                <div class="mx-1 col-12 text-dark text-center fw-bold bg-primary bg-opacity-25 card-header"
+                     style="font-size: 20px">Invoice Detail
+                </div>
+                <div class="card col-12 mx-1">
+                    <div class="card-body">
+                        <div class="form-group col-5 d-inline-block mx-3">
+                            <label class="form-label" for="orderId">Order ID :</label>
+                            <input aria-describedby="orderId" class="form-control btn-outline-primary bg-light bg-opacity-50 text-dark"
+                                   id="orderId" type="text">
+                        </div>
+
+                        <div class="form-group col-5 d-inline-block m-lg-2">
+                            <label class="form-label" for="orderDate">Order Date :</label>
+                            <input aria-describedby="orderDate" class="form-control btn-outline-primary bg-light bg-opacity-50 text-dark"
+                                   id=orderDate type="date">
+                        </div>
+
+                        <div class="mx-3 mt-2 col-5 d-inline-block">
+                            <label class="form-label" for="cmbCustomer">Customer :</label>
+                            <select class="form-select btn-outline-primary bg-light bg-opacity-50 text-dark"
+                                    id="cmbCustomer">
+                                <option>Select Customer</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-5 d-inline-block m-lg-2 mx-3">
+                            <label class="form-label" for="txtCustomerId">Customer Id :</label>
+                            <input class="form-control btn-outline-primary bg-light bg-opacity-50 text-dark" id=txtCustomerId
+                                   type="text">
+                        </div>
+
+                        <div class="form-group col-5 d-inline-block mx-3">
+                            <label class="form-label" for="txtCustomerName">Customer Name :</label>
+                            <input aria-describedby="orderId" class="form-control btn-outline-primary bg-light bg-opacity-50 text-dark"
+                                   id="txtCustomerName" type="text">
+                        </div>
+
+                        <div class="form-group col-5 d-inline-block m-lg-2 mx-3">
+                            <label class="form-label" for="txtCustomerSalary">Customer Salary :</label>
+                            <input class="form-control btn-outline-primary bg-light bg-opacity-50 text-dark" id=txtCustomerSalary
+                                   type="text">
+                        </div>
+
+                        <div class="form-group col-11 d-inline-block mx-lg-3 m-lg-2">
+                            <label class="form-label" for="txtCustomerAddress">Customer Address :</label>
+                            <input aria-describedby="orderId" class="form-control btn-outline-primary bg-light bg-opacity-50 text-dark"
+                                   id="txtCustomerAddress" type="text">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!--Item Select-->
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4">
+            <form>
+                <div class="mx-1 col-12 text-dark text-center fw-bold bg-danger bg-opacity-25 card-header"
+                     style="font-size: 20px">Item Select
+                </div>
+                <div class="card col-12 mx-1">
+                    <div class="card-body">
+                        <div class="mx-3 mt-2 col-5 d-inline-block">
+                            <label class="form-label" for="cmbItem">Item :</label>
+                            <select class="form-select btn-outline-danger bg-light bg-opacity-50 text-dark"
+                                    id="cmbItem">
+                                <option>Select Item</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-5 d-inline-block mx-3 m-lg-2">
+                            <label class="form-label" for="txtItemCode">Item Code :</label>
+                            <input class="form-control btn-outline-danger bg-light bg-opacity-50 text-dark" id="txtItemCode"
+                                   type="text">
+                        </div>
+
+                        <div class="form-group col-5 d-inline-block mx-3">
+                            <label class="form-label" for="txtItemName">Item Name :</label>
+                            <input class="form-control btn-outline-danger bg-light bg-opacity-50 text-dark" id="txtItemName"
+                                   type="text">
+                        </div>
+
+                        <div class="form-group col-5 d-inline-block m-lg-2 mx-3">
+                            <label class="form-label" for="txtItemPrice">Price :</label>
+                            <input class="form-control btn-outline-danger bg-light bg-opacity-50 text-dark" id=txtItemPrice
+                                   type="text">
+                        </div>
+
+                        <div class="form-group col-11 d-inline-block mx-lg-3 m-lg-2">
+                            <label class="form-label" for="txtQtyOnHand">QTY On Hand :</label>
+                            <input aria-describedby="orderId" class="form-control btn-outline-danger bg-light bg-opacity-50 text-dark"
+                                   id="txtQtyOnHand" type="text">
+                        </div>
+
+                        <div class="form-group col-5 d-inline-block mt-lg-2 mx-3">
+                            <label class="form-label" for="txtOrderQuantity">Order Quantity :</label>
+                            <input class="form-control btn-outline-danger bg-light bg-opacity-50 text-dark" id="txtOrderQuantity"
+                                   type="text">
+                        </div>
+
+                        <button class="btn btn-danger mx-5 mb-2 bg-danger bg-opacity-25 text-dark btn-outline-light w-auto"
+                                type="button">
+                            Add Item
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!--Payment Details-->
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4">
+            <form>
+                <div class="mx-0 col-12 text-dark text-center fw-bold bg-warning bg-opacity-50 card-header"
+                     style="font-size: 20px">Payment Details
+                </div>
+                <div class="card col-12 mx-0">
+                    <div class="card-body">
+                        <div class="mx-3 mt-2 col-5 d-inline-block">
+                            <label class="form-label">Total :</label>
+                        </div>
+
+                        <div class="mx-3 col-5">
+                            <label class="form-label fs-4">00.00 Rs/= </label>
+                        </div>
+
+                        <div class="mx-3 mt-2 col-5 d-inline-block">
+                            <label class="form-label">Sub Total :</label>
+                        </div>
+
+                        <div class="mx-3 col-5">
+                            <label class="form-label fs-4">00.00 Rs/= </label>
+                        </div>
+
+                        <div class="form-group col-5 d-inline-block mx-lg-3 m-lg-2">
+                            <label class="form-label" for="txtCash">Cash :</label>
+                            <input class="form-control btn-outline-warning bg-light bg-opacity-50 text-dark" id="txtCash"
+                                   type="text">
+                        </div>
+
+                        <div class="form-group col-5 d-inline-block mx-2">
+                            <label class="form-label" for="txtDiscount">Discount :</label>
+                            <input class="form-control btn-outline-warning bg-light bg-opacity-50 text-dark" id="txtDiscount"
+                                   type="text">
+                        </div>
+
+                        <div class="form-group col-5 d-inline-block m-lg-2 mx-lg-3">
+                            <label class="form-label" for="txtBalance">Balance :</label>
+                            <input class="form-control btn-outline-warning bg-light bg-opacity-50 text-dark" id="txtBalance"
+                                   type="text">
+                        </div>
+
+                        <button class="btn btn-danger mx-5 mb-2 bg-warning bg-opacity-50 text-dark btn-outline-light w-auto"
+                                type="button">
+                            Purchase
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!--Order Table-->
+
+        <div class="col-12 mt-3 col-sm-12 col-md-6 col-lg-6 col-xl-12 col-xxl-12">
+            <table class="table table-hover">
+                <thead class="bg-secondary bg-opacity-10 text-center">
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Unit Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                </tr>
+                </thead>
+                <tbody class="text-center" id="customerTable">
+
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+</section>
+
 <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="../assets/jQuery/jquery-3.6.0.min.js"></script>
 <script src="controller/CustomerController.js"></script>
@@ -247,56 +439,55 @@
 <script>
 
 
-
     /*  Item section*/
 
-   /* $("#btnSave").click(function () {
-        let itemId = $("#inputId").val();
-        let itemName = $("#inputName").val();
-        let itemAddress = $("#inputAddress").val();
-        let itemSalary = $("#inputSalary").val();
+    /* $("#btnSave").click(function () {
+         let itemId = $("#inputId").val();
+         let itemName = $("#inputName").val();
+         let itemAddress = $("#inputAddress").val();
+         let itemSalary = $("#inputSalary").val();
 
-        console.log(itemId, itemName, itemAddress, itemSalary);
+         console.log(itemId, itemName, itemAddress, itemSalary);
 
-        let row = `<tr><td>${itemId}</td><td>${itemName}</td><td>${itemAddress}</td><td>${itemSalary}</td></tr>`;
+         let row = `<tr><td>${itemId}</td><td>${itemName}</td><td>${itemAddress}</td><td>${itemSalary}</td></tr>`;
 
-        $("#itemTable").append(row);
+         $("#itemTable").append(row);
 
-        $("#itemTable>tr").off();
+         $("#itemTable>tr").off();
 
-        $("#itemTable>tr").click(function () {
-            let id = $(this).children(":eq(0)").text();
-            let name = $(this).children(":eq(1)").text();
-            let address = $(this).children(":eq(2)").text();
-            let salary = $(this).children(":eq(3)").text();
-            console.log(id, name, address, salary);
+         $("#itemTable>tr").click(function () {
+             let id = $(this).children(":eq(0)").text();
+             let name = $(this).children(":eq(1)").text();
+             let address = $(this).children(":eq(2)").text();
+             let salary = $(this).children(":eq(3)").text();
+             console.log(id, name, address, salary);
 
-            $("#inputId").val(id);
-            $("#inputName").val(name);
-            $("#inputAddress").val(address);
-            $("#inputSalary").val(salary);
+             $("#inputId").val(id);
+             $("#inputName").val(name);
+             $("#inputAddress").val(address);
+             $("#inputSalary").val(salary);
 
-        });
-    });
+         });
+     });
 
-    /!* item section end*!/
+     /!* item section end*!/
 
-    /!*  start customer section*!/
+     /!*  start customer section*!/
 
-    $("#btnCustomerSave").click(function () {
+     $("#btnCustomerSave").click(function () {
 
-        let customerID = $("#inputI").val();
-        let customerName = $("#inputNam").val();
-        let customerAddress = $("#inputAddres").val();
-        let customerSalary = $("#inputSalar").val();
+         let customerID = $("#inputI").val();
+         let customerName = $("#inputNam").val();
+         let customerAddress = $("#inputAddres").val();
+         let customerSalary = $("#inputSalar").val();
 
-        let row = `<tr><td>${customerID}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerSalary}</td>`
-        $("#tblCustomer").append(row);
+         let row = `<tr><td>${customerID}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerSalary}</td>`
+         $("#tblCustomer").append(row);
 
-        $("#tblCustomer>tr").dblclick(function () {
-            $(this).remove();
-        });
-    });*/
+         $("#tblCustomer>tr").dblclick(function () {
+             $(this).remove();
+         });
+     });*/
 
 </script>
 
