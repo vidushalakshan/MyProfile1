@@ -1,7 +1,7 @@
 $("#item").css("display", "none");
 $("#customer").css("display", "none");
 $("#home").css("display", "");
-$("#order").css("display", "");
+$("#order").css("display", "none");
 
 $("#linkCustomer").click(function () {
     $("#customer").css("display", "block");
