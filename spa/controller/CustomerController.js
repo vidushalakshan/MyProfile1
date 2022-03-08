@@ -1,5 +1,5 @@
 /*customer save*/
-$("#btnCustomerSave").attr('disable', true);
+
 
 function CustomerSave() {
     let id = $("#inputI").val();
@@ -29,11 +29,11 @@ function loadAllCustomer() {
 $("#btnCustomerSave").click(function () {
     CustomerSave();
     loadAllCustomer();
-    checkIfValid();
-    clearAll();
+    checkCustomerIfValid();
+    clearCustomerAll();
 });
 
-function clearAll() {
+function clearCustomerAll() {
     $('#inputI,#inputNam,#inputAddres,#inputSalar').val("");
     $('#inputI').focus();
     $("#btnCustomerSave").attr('disabled', true);
@@ -42,10 +42,10 @@ function clearAll() {
 
 /*validation*/
 
-const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;
-const cusNameRegEx = /^[A-z ]{5,20}$/;
-const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
-const cusSalaryRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+var cusIDRegEx = /^(C00-)[0-9]{1,3}$/;
+var cusNameRegEx = /^[A-z ]{5,20}$/;
+var cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
+var cusSalaryRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
 
 $('#inputI,#inputNam,#inputAddres,#inputSalar').on('keydown', function (eventOb) {
@@ -59,9 +59,9 @@ $('#inputI,#inputNam,#inputAddres,#inputSalar').on('blur', function () {
 });
 
 $("#inputI").on('keyup', function (eventOb) {
-    setButton();
+    setCustomerButton();
     if (eventOb.key == "Enter") {
-        checkIfValid();
+        checkCustomerIfValid();
     }
 
     if (eventOb.key == "Control") {
@@ -77,29 +77,29 @@ $("#inputI").on('keyup', function (eventOb) {
 });
 
 $("#inputNam").on('keyup', function (eventOb) {
-    setButton();
+    setCustomerButton();
     if (eventOb.key == "Enter") {
-        checkIfValid();
+        checkCustomerIfValid();
     }
 });
 
 $("#inputAddres").on('keyup', function (eventOb) {
-    setButton();
+    setCustomerButton();
     if (eventOb.key == "Enter") {
-        checkIfValid();
+        checkCustomerIfValid();
     }
 });
 
 $("#inputSalar").on('keyup', function (eventOb) {
-    setButton();
+    setCustomerButton();
     if (eventOb.key == "Enter") {
-        checkIfValid();
+        checkCustomerIfValid();
     }
 });
 
 $("#btnCustomerSave").attr('disabled', true);
 
-function formValid() {
+function formCustomerValid() {
     var cusID = $("#inputI").val();
     $("#inputI").css('border', '2px solid green');
     $("#lblcusid").text("");
@@ -140,7 +140,7 @@ function formValid() {
     }
 }
 
-function checkIfValid() {
+function checkCustomerIfValid() {
     var cusID = $("#inputI").val();
     if (cusIDRegEx.test(cusID)) {
         $("#inputNam").focus();
@@ -173,8 +173,8 @@ function checkIfValid() {
     }
 }
 
-function setButton() {
-    let b = formValid();
+function setCustomerButton() {
+    let b = formCustomerValid();
     if (b) {
         $("#btnCustomerSave").attr('disabled', false);
     } else {
@@ -192,7 +192,7 @@ $("#btnSearch").click(function () {
         $("#inputNam").val(r.name);
         $("#inputAddres").val(r.address);
         $("#inputSalar").val(r.salary);
-    }else{
+    } else {
         clearAll();
         alert("No Such a Customer");
     }
@@ -210,17 +210,17 @@ function getAllCustomers() {
     $("#tblCustomer").empty();
     for (let i = 0; i < customerTable.length; i++) {
         $("#tblCustomers> tbody").append("<tr>" +
-            "<td>"+customerTable[i].getId()+"</td>" +
-            "<td>"+customerTable[i].getName()+"</td>" +
-            "<td>"+customerTable[i].getAddress()+"</td>" +
-            "<td>"+customerTable[i].getSalary()+"</td>" +
+            "<td>" + customerTable[i].getId() + "</td>" +
+            "<td>" + customerTable[i].getName() + "</td>" +
+            "<td>" + customerTable[i].getAddress() + "</td>" +
+            "<td>" + customerTable[i].getSalary() + "</td>" +
             "</tr>");
     }
 }
 
-/*
-/!*Update a Customer*!/
+/*Update a Customer*/
 $("#customerUpdate").click(function () {
+    if ($("#inputI").val().length !== 0) {
         let cid = $("#inputI").val();
         let name = $("#inputNam").val();
         let address = $("#inputAddres").val();
@@ -235,17 +235,20 @@ $("#customerUpdate").click(function () {
         }
         getAllCustomers();
         alert("Customer was updated!");
-        setCustomerDetailsValue("","", "", "");
+        setCustomerDetailsValue("", "", "", "");
         $("#srcCusI").val("");
+    }else {
+        alert("Select an item to update !");
+    }
+
 });
 
-function setCustomerDetailsValue(id,name, address, contact) {
+function setCustomerDetailsValue(id, name, address, contact) {
     $("#inputI").val(id);
     $("#inputNam").val(name);
     $("#inputSalar").val(address);
     $("#inputSalar").val(contact);
 }
-*/
 
 
 
