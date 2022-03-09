@@ -1,6 +1,5 @@
 /*customer save*/
 function CustomerSave() {
-    if ( $("#inputI").val() !==this) {
         let itemId = $("#inputI").val();
         let name = $("#inputNam").val();
         let address = $("#inputAddres").val();
@@ -12,15 +11,14 @@ function CustomerSave() {
             address: address,
             salary: salary
         };
-        cmbCustomers("<option>"+itemId+"</option>");
         customerTable.push(CustomerObject);
-    }
+    cmbCustomers("<option>"+itemId+"</option>");
 }
 
 function loadAllCustomer() {
     $("#tblCustomer").empty();
     for (var i of customerTable) {
-        let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.address}</td><td>${i.salary}</td></tr>`;
+        let row = `<tr><td>${i.ItemID}</td><td>${i.name}</td><td>${i.address}</td><td>${i.salary}</td></tr>`;
         $("#tblCustomer").append(row);
     }
 }
