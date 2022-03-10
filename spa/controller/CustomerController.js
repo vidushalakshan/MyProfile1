@@ -1,24 +1,28 @@
 /*customer save*/
+let cusId = $("#inputI").val();
+let name = $("#inputNam").val();
+let address = $("#inputAddres").val();
+let salary = $("#inputSalar").val();
 function CustomerSave() {
-        let itemId = $("#inputI").val();
+        let cusId = $("#inputI").val();
         let name = $("#inputNam").val();
         let address = $("#inputAddres").val();
         let salary = $("#inputSalar").val();
 
         var CustomerObject = {
-            ItemID: itemId,
+            cusID: cusId,
             name: name,
             address: address,
             salary: salary
         };
         customerTable.push(CustomerObject);
-    cmbCustomers("<option>"+itemId+"</option>");
+    cmbCustomers("<option>"+cusId+"</option>");
 }
 
 function loadAllCustomer() {
     $("#tblCustomer").empty();
     for (var i of customerTable) {
-        let row = `<tr><td>${i.ItemID}</td><td>${i.name}</td><td>${i.address}</td><td>${i.salary}</td></tr>`;
+        let row = `<tr><td>${i.cusID}</td><td>${i.name}</td><td>${i.address}</td><td>${i.salary}</td></tr>`;
         $("#tblCustomer").append(row);
     }
 }
@@ -185,7 +189,7 @@ $("#btnSearch").click(function () {
     var searchID = $("#srcCusI").val();
     var r = searchCustomer(searchID);
     if (r) {
-        $("#inputI").val(r.id);
+        $("#inputI").val(r.cusID);
         $("#inputNam").val(r.name);
         $("#inputAddres").val(r.address);
         $("#inputSalar").val(r.salary);
@@ -203,7 +207,7 @@ function searchCustomer(id) {
     }
 }
 
-function getAllCustomers() {
+/*function getAllCustomers() {
     $("#tblCustomer").empty();
     for (let i = 0; i < customerTable.length; i++) {
         $("#tblCustomers> tbody").append("<tr>" +
@@ -213,9 +217,10 @@ function getAllCustomers() {
             "<td>" + customerTable[i].getSalary() + "</td>" +
             "</tr>");
     }
-}
+}*/
 
-/*Update a Customer*/
+/*
+/!*Update a Customer*!/
 $("#customerUpdate").click(function () {
     if ($("#inputI").val().length !== 0) {
         let cid = $("#inputI").val();
@@ -246,6 +251,29 @@ function setCustomerDetailsValue(id, name, address, contact) {
     $("#inputSalar").val(address);
     $("#inputSalar").val(contact);
 }
+*/
+var updateCustomer=$("#customerUpdate");
 
-
+updateCustomer.off('click');
+updateCustomer.click(function() {
+    if (confirm('Do you want to update ' + cusId.val() + ' details....If yes please enter Ok button...') == true) {
+        for (let i = 0; i < customerTable.length; i++) {
+            if (customerTable[i].setID() ==cusId .val()) {
+                customerTable[i].setName(name.val());
+                customerTable[i].setAddress(address.val());
+                customerTable[i].setSalary(salary.val());
+                $("#tblCustomer tbody tr").filter(function() {
+                    rowNoToUpdate = $(this).children("td:nth-child(1)").text();
+                    if ($(this).children("td:nth-child(2)").text() == customerTable[i].getId()) {
+                        $(this).replaceWith("<tr><td>" + (i + 1) + "</td><td>" + customerTable[i].getId() + "</td><td>" + customerTable[i].getName() + "</td><td>" + customerTable[i].getAddress() + "</td><td>" + customerTable[i].getSalary() + "</td><td>");
+                    }
+                })
+                clearCustomerAll();
+            }
+        }
+    } else {
+        alert('Updating ' + cusId.val() + ' Customer details is unsuccessful');
+        clearCustomerAll();
+    }
+});
 

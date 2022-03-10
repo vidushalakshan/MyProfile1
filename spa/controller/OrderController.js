@@ -15,7 +15,7 @@ $("#cmbCustomer").change(function () {
         customerId = "none";
     }
     for (let i = 0; i < customerTable.length; i++) {
-        if (customerTable[i].getId() === id) {
+        if (customerTable[i].getId() == id) {
             setCustomerOrder(customerTable[i].getId(), customerTable[i].getName(), customerTable[i].getAddress(), customerTable[i].getSalary());
         }
     }
