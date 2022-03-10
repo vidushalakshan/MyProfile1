@@ -31,7 +31,7 @@
             background-color: white;
         }
 
-        #lay2{
+        #lay2 {
             position: absolute;
             left: 0;
             right: 0;
@@ -42,14 +42,14 @@
             background-color: white;
         }
 
-        body>main>div:nth-child(4) div {
+        body > main > div:nth-child(4) div {
             position: relative;
-            width: calc(100%/5);
+            width: calc(100% / 5);
             border: 1px solid white;
             margin-left: 2%;
         }
 
-        .container{
+        .container {
             position: absolute;
             width: 62%;
             height: 10%;
@@ -75,5 +75,117 @@
         <div id="fifthBox"></div>
     </div>
 </main>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+<script>
+    var firstBox = $("#firstBox");
+    var secondBox = $("#secondBox");
+    var thirdBox = $("#thirdBox");
+    var fourthBox = $("#fourthBox");
+    var fifthBox = $("#fifthBox");
+
+    var timerId;
+
+
+    timerId = setInterval(setIntervalForStarts,120);
+
+
+    function col1(div){
+        div.css('backgroundColor',"#bf2424");
+    }
+    function col2(div){
+        div.css('backgroundColor',"#bf2424");
+    }
+    function col3(div){
+        div.css('backgroundColor','#cc1616')
+    };
+
+    var iterator = 0;
+    function setIntervalForStarts(){
+        if(iterator == 0){
+            firstBox.css('opacity','100%')
+            secondBox.css('opacity','100%')
+            thirdBox.css('opacity','50%')
+            fourthBox.css('opacity','50%')
+            fifthBox.css('opacity','50%')
+            col1(secondBox);
+            col3(firstBox);
+            iterator++;
+        }else if(iterator == 1){
+            firstBox.css('opacity','100%')
+            secondBox.css('opacity','100%')
+            thirdBox.css('opacity','100%')
+            fourthBox.css('opacity','50%')
+            fifthBox.css('opacity','50%')
+            col1(firstBox);
+            col2(thirdBox);
+            col3(secondBox);
+            iterator++;
+        }else if(iterator == 2){
+            firstBox.css('opacity','50%')
+            secondBox.css('opacity','100%')
+            thirdBox.css('opacity','100%')
+            fourthBox.css('opacity','100%')
+            fifthBox.css('opacity','50%')
+            col1(secondBox);
+            col2(fourthBox);
+            col3(thirdBox);
+            iterator++;
+        }
+        else if(iterator == 3){
+            firstBox.css('opacity','50%')
+            secondBox.css('opacity','50%')
+            thirdBox.css('opacity','100%')
+            fifthBox.css('opacity','100%')
+            fourthBox.css('opacity','100%')
+            col1(thirdBox);
+            col2(fifthBox);
+            col3(fourthBox);
+            iterator++;
+        }
+        else if(iterator == 4){
+            firstBox.css('opacity','50%')
+            secondBox.css('opacity','50%')
+            thirdBox.css('opacity','50%')
+            fourthBox.css('opacity','100%')
+            fifthBox.css('opacity','100%')
+            col1(fourthBox);
+            col3(fifthBox);
+            iterator++;
+        }
+        else if(iterator == 5){
+            firstBox.css('opacity','50%')
+            secondBox.css('opacity','50%')
+            thirdBox.css('opacity','100%')
+            fourthBox.css('opacity','100%')
+            fifthBox.css('opacity','100%')
+            col1(thirdBox);
+            col2(fifthBox);
+            col3(fourthBox);
+            iterator++;
+        }
+        else if(iterator == 6){
+            firstBox.css('opacity','50%')
+            secondBox.css('opacity','100%')
+            thirdBox.css('opacity','100%')
+            fourthBox.css('opacity','100%')
+            fifthBox.css('opacity','50%')
+            col1(secondBox);
+            col2(fourthBox);
+            col3(thirdBox);
+            iterator++;
+        }
+        else if(iterator == 7){
+            firstBox.css('opacity','100%')
+            secondBox.css('opacity','100%')
+            thirdBox.css('opacity','100%')
+            fourthBox.css('opacity','50%')
+            fifthBox.css('opacity','50%')
+            col1(firstBox);
+            col2(thirdBox);
+            col3(secondBox);
+            iterator=0;
+        }
+    };
+</script>
 </body>
 </html>
