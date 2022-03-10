@@ -3,30 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <title>Kitt animation</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        #background{
+        #background {
             background-color: black;
             height: 100vh;
             width: 100%;
         }
 
-        #text{
+        #text {
             position: relative;
             text-align: center;
-            font-size: 25px;
             color: red;
+            padding-top: 192px;
+        }
+
+        #lay1 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 40%;
+            margin: auto;
+            width: 61%;
+            height: 0.3%;
+            background-color: white;
+        }
+
+        #lay2{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 60%;
+            margin: auto;
+            width: 61%;
+            height: 0.3%;
+            background-color: white;
+        }
+
+        body>main>div:nth-child(4) div {
+            position: relative;
+            width: calc(100%/5);
+            border: 1px solid white;
+            margin-left: 2%;
+        }
+
+        .container{
+            position: absolute;
+            width: 62%;
+            height: 10%;
+            top: 45%;
+            left: -1%;
+            right: 0;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
         }
     </style>
 </head>
 <body>
 <main id="background">
     <h1 id="text">Javascript Knight Rider</h1>
-    <div></div>
-    <div></div>
-    <div class=".container">
+    <div id="lay1"></div>
+    <div id="lay2"></div>
+    <div class="container">
         <div id="firstBox"></div>
         <div id="secondBox"></div>
         <div id="thirdBox"></div>
