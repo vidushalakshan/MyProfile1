@@ -31,6 +31,7 @@ $("#btnCustomerSave").click(function () {
     loadAllCustomer();
     checkCustomerIfValid();
     clearCustomerAll();
+    deleteCustomer();
 });
 
 function clearCustomerAll() {
@@ -218,7 +219,7 @@ function getAllCustomers() {
     }
 }
 
-/*Update a Customer*/
+/*/!*Update a Customer*!/
 $("#customerUpdate").click(function () {
     console.log("hellow");
     if ($("#inputNam").val() !== 0) {
@@ -250,7 +251,7 @@ function setCustomerDetailsValue(id, name, address, contact) {
     $("#inputNam").val(name);
     $("#inputSalar").val(address);
     $("#inputSalar").val(contact);
-}
+}*/
 
 
 /*$("#cutomerUpdate").click(function() {
@@ -275,4 +276,48 @@ function setCustomerDetailsValue(id, name, address, contact) {
         clearCustomerAll();
     }
 });*/
+
+$("#customerUpdate").click(function () {
+    let id =$("#inputI").val();
+    updateCustomerID(id);
+    clearCustomerAll();
+});
+
+function updateCustomerID(id) {
+    for (var i=0; i<customerTable.length;i++){
+        if (customerTable[i].getId()==id){
+            customerTable[i].setID(cusId);
+            customerTable[i].setName(name);
+            customerTable[i].setAddress(address);
+            customerTable[i].setSalary(salary);
+            loadAllCustomer();
+        }
+    }
+}
+
+function deleteCustomer() {
+    $("#tblCustomer>tr").dblclick(function () {
+        alert("Do you really need to delete this item?");
+        $(this).remove();
+        customerTable.pop();
+    });
+}
+/*/!*deleteCustomer*!/
+function deleteCustomer() {
+    var s=$("#inputI").val();
+    for (let i = 0; i < customerTable.length; i++) {
+        if (customerTable[i].getId()==s){
+            customerTable.pop();
+            loadAllCustomer();
+        }
+    }
+}
+
+$("btnCustomerDelete").click(function () {
+    let alert=confirm("Do You Want To Delete");
+    if (alert){
+        deleteCustomer();
+        clearCustomerAll();
+    }
+})*/
 
