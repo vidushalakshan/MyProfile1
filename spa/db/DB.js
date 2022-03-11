@@ -1,4 +1,4 @@
-let customerTable = [];
-let itemTable = [];
-let orderTable = [];
-let orderDetailTable = [];
+let customerTable = new Array();
+let itemTable =  new Array();
+let orderTable =  new Array();
+let orderDetailTable =  new Array();

@@ -35,7 +35,6 @@
             font-weight: bold;
             position: relative;
             left: 22px;
-            padding: 10px;
             letter-spacing: 7px;
         }
 
@@ -69,10 +68,33 @@
             letter-spacing: -3.5px;
         }
 
-        #logo > span {
-            color: black;
+        #logo2{
+            color: white;
             transition: color 0.4s ease;
+            animation-name: box;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
         }
+
+        @keyframes box {
+            0%,25%{
+            }
+            25%{
+                background-color: yellow;
+            }
+            50%{
+                background-color: #0e26e8;
+            }
+            75%{
+                background-color: #008d1b;
+            }
+            100%{
+                background-color: #ffa500;
+            }
+
+        }
+
 
 
         /* navbar stylig stop*/
@@ -1442,7 +1464,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <h1 id="logo">V<span>L</span></h1>
+        <h1 id="logo">V<h1 id="logo2">L</h1></h1>
     </section>
 </header>
 <!-- close navbar-->
