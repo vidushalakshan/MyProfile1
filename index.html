@@ -11,6 +11,9 @@
     <link href="assets/css/normalize.css" rel="stylesheet">
     <style>
 
+        *{
+            scroll-behavior: smooth;
+        }
 
         /*navbar Styling start*/
 
@@ -60,6 +63,15 @@
         header> section > nav > ul > li > a {
             text-decoration-line: none;
             color: white;
+        }
+
+        header> section > nav > ul > li.active a{
+            color: #0089f2;
+            box-shadow: inset 0 0 5px #0187f5,
+            inset 0 0 10px #85c3fa,
+            inset 0 0 15px #b6dbfc;
+
+
         }
 
         #logo {
@@ -177,7 +189,7 @@
             font-weight: 600;
             margin-left: 41px;
             font-weight: bold;
-            color: #0ae0ae;
+            color: #2b12ff;
             font-family: 'Crete Round', serif;
             text-transform: uppercase;
             height: 100%;
@@ -824,6 +836,7 @@
         main > section:nth-child(4) > section {
             height: 400px;
             margin-top: 385px;
+            transition: ease-out 0.3s;
         }
 
         main > section:nth-child(4) > section > div {
@@ -863,6 +876,7 @@
         main > section:nth-child(4) > section > div:hover {
             cursor: pointer;
             /*background-color: #ba0b2e;*/
+            transform: scale(1.05);
         }
 
         .ptxt {
@@ -1603,7 +1617,7 @@
         </h1>
         <section>
             <div>
-                <a href="https://github.com/vidushalakshan/SuperMarket-LayeredArchitecture-"><img
+                <a class="active" href="https://github.com/vidushalakshan/SuperMarket-LayeredArchitecture-"><img
                         alt="There was an error loading this image.." class="pimg" src="assets/image/project1.png"></a>
                 <div class="ptxt"><h2>Blue Ocean Hotel</h2></div>
             </div>
@@ -1737,7 +1751,7 @@
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 
 <script>
-    $(document).ready(function () {
+   /* $(document).ready(function () {
         $(window).scroll(function () {
             if (this.scrollY > 20) {
                 $('.bar').addClass("sticky");
@@ -1745,7 +1759,10 @@
                 $('.bar').removeClass("sticky");
             }
         })
-    });
+    });*/
+    $('nav ul li').click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+    })
 </script>
 </body>
 </html>
