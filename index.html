@@ -17,9 +17,11 @@
 
         /*navbar Styling start*/
 
-        .bar .sticky {
+        .bar {
+            position: initial;
+            top: 0;
+            background-color: crimson;
             padding: 2px 0;
-            background: #b8b8b5;
             transition: all 0.3s ease;
         }
         header {
@@ -27,7 +29,6 @@
             height: 62px;
             width: 100%;
             z-index: 1;
-            background-color: crimson;
             margin-top: -17px;
         }
 
@@ -81,7 +82,7 @@
         }
 
         #logo2{
-            color: white;
+            color: #131313;
             transition: color 0.4s ease;
             animation-name: box;
             animation-duration: 5s;
@@ -1495,7 +1496,7 @@
     <section class="bar">
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a class="active" href="#home">Home</a></li>
                 <li><a href="#aboutme">About Me</a></li>
                 <li><a href="#skil">Skils</a></li>
                 <li><a href="#myprojects">My Projects</a></li>
@@ -1617,7 +1618,7 @@
         </h1>
         <section>
             <div>
-                <a class="active" href="https://github.com/vidushalakshan/SuperMarket-LayeredArchitecture-"><img
+                <a href="https://github.com/vidushalakshan/SuperMarket-LayeredArchitecture-"><img
                         alt="There was an error loading this image.." class="pimg" src="assets/image/project1.png"></a>
                 <div class="ptxt"><h2>Blue Ocean Hotel</h2></div>
             </div>
@@ -1763,6 +1764,17 @@
     $('nav ul li').click(function () {
         $(this).addClass("active").siblings().removeClass("active");
     })
+
+    let navbar=document.querySelector('bar');
+    let scrollPrevipus=window.pageYOffset;
+    window.onscroll=function () {
+        let scrollCurrent=window.pageYOffset;
+        if (scrollPrevipus>scrollCurrent){
+            navbar.style.top="0px";
+        }else {
+            navbar.style.top="-90px";
+        }
+    }
 </script>
 </body>
 </html>
