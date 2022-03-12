@@ -148,7 +148,7 @@
         }
 
         .hometext {
-            color: white;
+            color: #efaf00;
 
         }
 
@@ -172,14 +172,40 @@
             font-family: 'Crete Round', serif;
         }
 
-        .text4 {
+        .text4{
             font-size: 53px;
             font-weight: 600;
             margin-left: 41px;
-            color: red;
+            font-weight: bold;
+            color: #0ae0ae;
             font-family: 'Crete Round', serif;
+            text-transform: uppercase;
+            height: 100%;
+            width: 0;
+            border-right: 2px solid red;
+            overflow: hidden;
+            animation: animate 6s linear infinite;
         }
 
+       /* .text4::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            border-right: 2px solid red;
+            overflow: hidden;
+            animation: animate 6s linear infinite;
+        }*/
+        
+        @keyframes animate {
+            0%,10%,100%{
+                width: 0;
+            }70%,90%{
+            width: 100%;
+                         }
+        }
+        
         .sociallink {
             transition: ease-out 0.3s;
         }
@@ -1478,7 +1504,7 @@
             <div class="text1">Hello, I'm</div>
             <div class="text2">Vidusha Lakshan</div>
             <div class="text3">And I'm a</div>
-            <div class="text4">Software Developer</div>
+            <div class="text4">Software  Developer</div>
         </pre>
             </article>
             <div>
