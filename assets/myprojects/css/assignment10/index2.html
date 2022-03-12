@@ -13,44 +13,103 @@
         }
         section>div:nth-child(1){
             background: url("../../../image/asssignment/sky.jpg");
-            height: 407px;
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+            position: relative;
+            overflow-x: hidden;
         }
 
         section>div:nth-child(2){
             background: url("../../../image/asssignment/city.png");
             height: 250px;
+            width: 500%;
+            position: absolute;
+            bottom: 200px;
+            left: 0;
+            right: 0;
+            display: block;
             z-index: 1;
-            position: relative;
-            bottom: 246px;
+            background-repeat: repeat-x;
+            animation: city 20s linear infinite;
+        }
+
+        @keyframes city {
+            100%{
+                transform: translateX(-1400px);
+            }
         }
 
         section>div:nth-child(3){
             background: url("../../../image/asssignment/road.jpg");
-            height: 43vh;
-            position: relative;
-            bottom: 246px;
+            height: 200px;
+            width: 500%;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            background-repeat: repeat-x;
+            animation: way 5s linear infinite;
+        }
+        
+        @keyframes way {
+            100%{
+                transform: translateX(-3400px);
+            }
+            
         }
 
         .car{
-            position: relative;
-            bottom: 616px;
-            left: 530px;
-            width: 29vw;
-            height: 24vh;
+            width: 400px;
+            left: 35%;
+            bottom: 100px;
+            transform: translateX(-50%);
+            position: absolute;
+            z-index: 2;
+            animation: car 1s linear infinite;
+        }
+
+        @keyframes car {
+            100%{
+                transform: translateY(-1px);
+            }
+            50%{
+                transform: translateY(1px);
+            }
+            0%{
+                transform: translateY(-1px);
+            }
+        }
+        .wheel{
+            left: 50%;
+            bottom:178px;
+            transform: translateX(-50%);
+            position: absolute;
             z-index: 2;
         }
+
+        .wheel img{
+            width: 72px;
+            height: 72px;
+            animation: wheel 1s linear infinite;
+        }
+
+        @keyframes wheel {
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
         .weel1{
-            position: relative;
-            bottom: 703px;
-            left: 569px;
-            height: 11vh;
+            left: -193px;
+            position: absolute;
         }
 
         .weel2{
-            position: relative;
-            bottom: 703px;
-            left: 759px;
-            height: 11vh;
+            left: 52px;
+            position: absolute;
         }
     </style>
 </head>
@@ -62,7 +121,7 @@
     <div >
         <img class="car" src="../../../image/asssignment/car.png">
     </div>
-    <div>
+    <div class="wheel">
         <img class="weel1" src="../../../image/asssignment/wheel.png">
         <img class="weel2" src="../../../image/asssignment/wheel.png">
     </div>
