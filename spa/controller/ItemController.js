@@ -1,32 +1,4 @@
-/*item save*/
-function ItemSave() {
-    let id = $("#inputId").val();
-    let name = $("#inputName").val();
-    let price = $("#inputPrice").val();
-    let qty = $("#inputQty").val();
 
-    var ItemObject = {
-        id: id,
-        name: name,
-        price: price,
-        qty: qty
-    };
-    itemTable.push(ItemObject);
-}
-
-function loadAllItem() {
-    $("#itemTable").empty();
-    for (var i of itemTable) {
-        let row = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.price}</td><td>${i.qty}</td></tr>`;
-        $("#itemTable").append(row);
-    }
-}
-
-$("#btnItemSave").click(function () {
-    loadAllItem();
-    checkIfValid();
-    clearAll();
-});
 
 function clearAll() {
     $('#inputId,#inputName,#inputPrice,#inputQty').val("");
@@ -180,24 +152,81 @@ function setButton() {
 
 /*search Customer*/
 
-$("#btnItemSearch").click(function () {
-    var searchID = $("#srcItemID").val();
-    var k= searchItem(searchID);
-    if (k) {
-        $("#inputId").val(k.id);
-        $("#inputName").val(k.name);
-        $("#inputPrice").val(k.price);
-        $("#inputQty").val(k.qty);
-    } else {
-        clearAll();
-        alert("No Such a Item");
+/*$("#btnItemSearch").click(function () {
+    let property=$("#srcItemID").val();
+    let index=isExists(property,property);
+    if(index!=-1){
+        alert("Item Found....");
+        $("#inputId").val(itemTable[index].getCode());
+        $("#inputName").val(itemTable[index].getItemName());
+        $("#inputPrice").val(itemTable[index].getPrice());
+        $("#inputQty").val(itemTable[index].getQty());
+        return;
     }
+    alert("Item Not Found...");
+});*/
+
+
+/*item save and update*/
+
+$("#btnItemSave").click(function () {
+    let itemID = $("#inputId").val();
+    let itemName = $("#inputName").val();
+    let price = $("#inputPrice").val();
+    let qty = $("#inputQty").val();
+
+    let nullVal = '';
+
+    if (itemID == nullVal || itemName == nullVal || price == nullVal || qty == nullVal) {
+        alert("warning-Please Input Data Correctly To Continue..");
+        return;
+    }
+    let index = isExists(cusId);
+    if (index != -1) {
+        alert("Item Updated");
+        itemTable[index].setItemName(itemName);
+        itemTable[index].setPrice(price);
+        itemTable[index].setQty(qty);
+        loadAllItem();
+        bindEvent();
+        return;
+    }
+
+    let i1 = new Customer(itemID, itemName, price, qty);
+    itemTable.push(i1);
+    loadAllItem()
+    bindEvent();
+    clearAll();
 });
 
-function searchItem(id) {
-    for (let i = 0; i < itemTable.length; i++) {
-        if (itemTable[i].id == id) {
-            return itemTable[i];
+
+function loadAllItem() {
+        $("#itemTable>tr").remove();
+
+        for(let i=0;i<itemTable.length;i++){
+            let itemID=itemTable[i].getCustomerID();
+            let itemName=itemTable[i].getName();
+            let price=itemTable[i].getAddress();
+            let qty=itemTable[i].getSalary();
+            let row = `<tr><td>${itemID}</td><td>${itemName}</td><td>${price}</td><td>${qty}</td></tr>`;
+            $("#itemTable").append(row);
         }
-    }
+
 }
+
+function bindEvent() {
+    $("#itemTable>tr").off("click");
+    $("#itemTable>tr").click(function () {
+        let Row = $(this);
+        let itemID = $(Row.children().get(0)).text();
+        let itemName = $(Row.children().get(1)).text();
+        let price = $(Row.children().get(2)).text();
+        let qty = $(Row.children().get(3)).text();
+        //Assignment
+        $("#inputId").val(itemID);
+        $("#inputName").val(itemName);
+        $("#inputPrice").val(price);
+        $("#inputQty").val(qty );
+    });
+}
+
