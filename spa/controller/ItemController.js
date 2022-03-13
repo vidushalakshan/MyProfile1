@@ -191,12 +191,12 @@ $("#btnItemSave").click(function () {
         alert("warning-Please Input Data Correctly To Continue..");
         return;
     }
-    let index = isExists(cusId);
-    if (index != -1) {
+    let index1= isItemExists(itemID);
+    if (index1 != -1) {
         alert("Item Updated");
-        itemTable[index].setItemName(itemName);
-        itemTable[index].setPrice(price);
-        itemTable[index].setQty(qty);
+        itemTable[index1].setItemName(itemName);
+        itemTable[index1].setPrice(price);
+        itemTable[index1].setQty(qty);
         loadAllItem();
         bindEvent();
         return;
@@ -236,7 +236,23 @@ function bindEvent() {
         $("#inputId").val(itemID);
         $("#inputName").val(itemName);
         $("#inputPrice").val(price);
-        $("#inputQty").val(qty );
+        $("#inputQty").val(qty);
     });
 }
+
+/*item delete */
+$("#btnItemDelete").click(function () {
+    console.log("helo");
+    let itemID = $("#inputId").val();
+    let index = isItemExists(itemID);
+    if (index != -1) {
+        itemTable.splice(index, 1);
+        loadAllItem();
+        alert("Customer " + itemID+ " Deleted");
+        clearAll();
+        return;
+    }
+    alert("No Item Found");
+});
+
 
