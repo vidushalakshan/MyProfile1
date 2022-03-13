@@ -152,9 +152,9 @@ function setButton() {
 
 /*search Customer*/
 
-/*$("#btnItemSearch").click(function () {
+$("#btnItemSearch").click(function () {
     let property=$("#srcItemID").val();
-    let index=isExists(property,property);
+    let index=isItemExists(property);
     if(index!=-1){
         alert("Item Found....");
         $("#inputId").val(itemTable[index].getCode());
@@ -164,7 +164,17 @@ function setButton() {
         return;
     }
     alert("Item Not Found...");
-});*/
+});
+
+function isItemExists(code) {
+    let x=-1;
+    for(let i=0;i<itemTable.length;i++){
+        if(itemTable[i].getCode()==code) {
+            x = i;
+        }
+    }
+    return x;
+}
 
 
 /*item save and update*/
@@ -192,7 +202,7 @@ $("#btnItemSave").click(function () {
         return;
     }
 
-    let i1 = new Customer(itemID, itemName, price, qty);
+    let i1 = new Item(itemID, itemName, price, qty);
     itemTable.push(i1);
     loadAllItem()
     bindEvent();
@@ -204,10 +214,10 @@ function loadAllItem() {
         $("#itemTable>tr").remove();
 
         for(let i=0;i<itemTable.length;i++){
-            let itemID=itemTable[i].getCustomerID();
-            let itemName=itemTable[i].getName();
-            let price=itemTable[i].getAddress();
-            let qty=itemTable[i].getSalary();
+            let itemID=itemTable[i].getCode();
+            let itemName=itemTable[i].getItemName();
+            let price=itemTable[i].getPrice();
+            let qty=itemTable[i].getQty();
             let row = `<tr><td>${itemID}</td><td>${itemName}</td><td>${price}</td><td>${qty}</td></tr>`;
             $("#itemTable").append(row);
         }
