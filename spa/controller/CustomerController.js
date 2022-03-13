@@ -1,38 +1,67 @@
-/*customer save*/
+/*customer save and update*/
 let cusId = $("#inputI").val();
 let name = $("#inputNam").val();
 let address = $("#inputAddres").val();
 let salary = $("#inputSalar").val();
-function CustomerSave() {
+
+$("#btnCustomerSave").click(function () {
     let cusId = $("#inputI").val();
     let name = $("#inputNam").val();
     let address = $("#inputAddres").val();
     let salary = $("#inputSalar").val();
-        var CustomerObject = {
-            cusID: cusId,
-            name: name,
-            address: address,
-            salary: salary
-        };
-        customerTable.push(CustomerObject);
-        cmbCustomers("<option>"+cusId+"</option>");
-}
+
+    let nullVal = '';
+    if (cusId == nullVal || name == nullVal || address == nullVal || salary == nullVal) {
+        alert("warning-Please Input Data Correctly To Continue..");
+        return;
+    }
+    let index = isExists(cusId);
+    if (index != -1) {
+        alert("Customer Updated");
+        customerTable[index].setName(name);
+        customerTable[index].setAddress(address);
+        customerTable[index].setSalary(salary);
+        loadAllCustomer();
+        bindEvent();
+        return;
+    }
+
+    let c1 = new Customer(cusId, name, address, salary);
+    customerTable.push(c1);
+    loadAllCustomer();
+    bindEvent();
+    clearCustomerAll();
+
+});
+
 
 function loadAllCustomer() {
-    $("#tblCustomer").empty();
-    for (var i of customerTable) {
-        let row = `<tr><td>${i.cusID}</td><td>${i.name}</td><td>${i.address}</td><td>${i.salary}</td></tr>`;
+    $("#tblCustomer>tr").remove();
+    for(let i=0;i<customerTable.length;i++){
+        let customerID=customerTable[i].getCustomerID();
+        let customerName=customerTable[i].getName();
+        let customerAddress=customerTable[i].getAddress();
+        let customerTP=customerTable[i].getSalary();
+        let row = `<tr><td>${customerID}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerTP}</td></tr>`;
         $("#tblCustomer").append(row);
     }
 }
 
-$("#btnCustomerSave").click(function () {
-    CustomerSave();
-    loadAllCustomer();
-    checkCustomerIfValid();
-    clearCustomerAll();
-    deleteCustomer();
-});
+function bindEvent() {
+    $("#tblCustomer>tr").off("click");
+    $("#tblCustomer>tr").click(function () {
+        let Row = $(this);
+        let CustomerID = $(Row.children().get(0)).text();
+        let CustomerName = $(Row.children().get(1)).text();
+        let CustomerAddress = $(Row.children().get(2)).text();
+        let CustomerTP = $(Row.children().get(3)).text();
+        //Assignment
+        $("#inputI").val(CustomerID);
+        $("#inputNam").val(CustomerName);
+        $("#inputAddres").val(CustomerAddress);
+        $("#inputSalar").val(CustomerTP);
+    });
+}
 
 function clearCustomerAll() {
     $('#inputI,#inputNam,#inputAddres,#inputSalar').val("");
@@ -183,175 +212,50 @@ function setCustomerButton() {
     }
 }
 
-/*search Customer*/
-
+/*customer search*/
 $("#btnSearch").click(function () {
-    var searchID = $("#srcCusI").val();
-    var r = searchCustomer(searchID);
-    if (r) {
-        $("#inputI").val(r.cusID);
-        $("#inputNam").val(r.name);
-        $("#inputAddres").val(r.address);
-        $("#inputSalar").val(r.salary);
-    } else {
-        clearAll();
-        alert("No Such a Customer");
+    let property=$("#srcCusI").val();
+    let index=isExists(property,property);
+    if(index!=-1){
+        alert("Customer Found");
+        $("#inputI").val(customerTable[index].getCustomerID());
+        $("#inputNam").val(customerTable[index].getName());
+        $("#inputAddres").val(customerTable[index].getAddress());
+        $("#inputSalar").val(customerTable[index].getSalary());
+        return;
     }
+    alert("Customer Not Found");
 });
 
-function searchCustomer(id) {
-    for (let i = 0; i < customerTable.length; i++) {
-        if (customerTable[i].cusID == id) {
-            return customerTable[i];
-        }
-    }
-}
-
-function getAllCustomers() {
-    $("#tblCustomer").empty();
-    for (let i = 0; i < customerTable.length; i++) {
-        $("#tblCustomers> tbody").append("<tr>" +
-            "<td>" + customerTable[i].getId() + "</td>" +
-            "<td>" + customerTable[i].getName() + "</td>" +
-            "<td>" + customerTable[i].getAddress() + "</td>" +
-            "<td>" + customerTable[i].getSalary() + "</td>" +
-            "</tr>");
-    }
-}
-
-/*Update a Customer*/
-$("#customerUpdate").click(function () {
-    console.log("hellow");
-        let cid = $("#inputI").val();
-        let name = $("#inputNam").val();
-        let address = $("#inputAddres").val();
-        let salary = $("#inputSalar").val();
-
-        for (var i = 0; i < customerTable.length; i++) {
-            if (customerTable[i].getId() == cid ) {
-                customerTable[i].setName(name);
-                customerTable[i].setAddress(address);
-                customerTable[i].setSalary(salary);
-            }
-        }
-        loadAllCustomer();
-});
-
-function bindCustomer() {
-    $("#tblCustomer > tr").click(function () {
-        let customerID = $(this).children(":eq(0)").text();
-        let customerName = $(this).children(":eq(1)").text();
-        let customerAddress = $(this).children(":eq(2)").text();
-        let customerSalary = $(this).children(":eq(3)").text();
-
-        /*_________set data for text fields__________*/
-        $("#inputI").val(customerID);
-        $("#inputNam").val(customerName);
-        $("#inputAddres").val(customerAddress);
-        $("#inputSalar").val(customerSalary);
-
-    });
-}
-
-function setCustomerDetailsValue(id, name, address, contact) {
-    $("#inputI").val(id);
-    $("#inputNam").val(name);
-    $("#inputSalar").val(address);
-    $("#inputSalar").val(contact);
-}
-
-function loadAllCustomers() {
-
-    $("#tblCustomer").empty();
-    for (var i of customerTable) {
-        let row = `<tr><td>${i.getId()}</td><td>${i.getName()}</td><td>${i.getAddress()}</td><td>${i.getSalary()}</td></tr>`;
-        $("#tblCustomer").append(row);
-
-        bindCustomer();
-
-        deleteCustomer();
-    }
-}
-
-function deleteCustomer() {
-    $("#btnCustomerDelete").click(function () {
-        let getClickData = $("#inputI").val();
-        for (let i = 0; i < customerTable.length; i++) {
-            if (customerTable[i].getId() == getClickData) {
-                customerTable.splice(i, 1);
-            }
-        }
-        clearAll();
-        loadAllCustomers();
-
-    });
-}
-
-
-/*$("#cutomerUpdate").click(function() {
-    console.log("hellow");
-    if (confirm('Do you want to update ' + cusId.val() + ' details....If yes please enter Ok button...') == true) {
-        for (let i = 0; i < customerTable.length; i++) {
-            if (customerTable[i].setID() ==cusId .val()) {
-                customerTable[i].setName(name.val());
-                customerTable[i].setAddress(address.val());
-                customerTable[i].setSalary(salary.val());
-                $("#tblCustomer tbody tr").filter(function() {
-                    rowNoToUpdate = $(this).children("td:nth-child(1)").text();
-                    if ($(this).children("td:nth-child(2)").text() == customerTable[i].getId()) {
-                        $(this).replaceWith("<tr><td>" + (i + 1) + "</td><td>" + customerTable[i].getId() + "</td><td>" + customerTable[i].getName() + "</td><td>" + customerTable[i].getAddress() + "</td><td>" + customerTable[i].getSalary() + "</td><td>");
-                    }
-                })
-                clearCustomerAll();
-            }
-        }
-    } else {
-        alert('Updating ' + cusId.val() + ' Customer details is unsuccessful');
+/*customer delete */
+$("#btnCustomerDelete").click(function () {
+    console.log("helo");
+    let customerID = $("#inputI").val();
+    let index = isExists(customerID);
+    if (index != -1) {
+        customerTable.splice(index, 1);
+        loadAllCustomer()
+        alert("Customer " + customerID + " Deleted");
         clearCustomerAll();
+        return;
     }
-});*/
-/*
-$("#customerUpdate").click(function () {
-    let id =$("#inputI").val();
-    updateCustomerID(id);
-    clearCustomerAll();
+    alert("No Customer Found");
 });
 
-function updateCustomerID(id) {
-    for (var i=0; i<customerTable.length;i++){
-        if (customerTable[i].getId()==id){
-            customerTable[i].setID(cusId);
-            customerTable[i].setName(name);
-            customerTable[i].setAddress(address);
-            customerTable[i].setSalary(salary);
-            loadAllCustomer();
-        }
-    }
-}
-
-function deleteCustomer() {
-    $("#tblCustomer>tr").dblclick(function () {
-        alert("Do you really need to delete this item?");
-        $(this).remove();
-        customerTable.pop();
-    });
-}*/
-/*/!*deleteCustomer*!/
-function deleteCustomer() {
-    var s=$("#inputI").val();
+function isExists(id, address) {
+    let x = -1;
     for (let i = 0; i < customerTable.length; i++) {
-        if (customerTable[i].getId()==s){
-            customerTable.pop();
-            loadAllCustomer();
+        if (customerTable[i].getCustomerID() == id || customerTable[i].getAddress() == address) {
+            x = i;
         }
     }
+    return x;
 }
 
-$("btnCustomerDelete").click(function () {
-    let alert=confirm("Do You Want To Delete");
-    if (alert){
-        deleteCustomer();
-        clearCustomerAll();
-    }
-})*/
+$("#customerClear").click(function () {
+    $('#inputI,#inputNam,#inputAddres,#inputSalar').val("");
+    $('#inputI').focus();
+    $("#btnCustomerSave").attr('disabled', true);
+});
+
 

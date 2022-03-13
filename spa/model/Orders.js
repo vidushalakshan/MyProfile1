@@ -13,10 +13,10 @@ function Order(oid,cusId,date,qty,discount,total) {
         __oid=oid;
     }
 
-    this.getCusId=function () {
+    this.getCId=function () {
         return cusId;
     }
-    this.setCusId=function (cusId) {
+    this.setCId=function (cusId) {
         __cusId=cusId;
     }
 

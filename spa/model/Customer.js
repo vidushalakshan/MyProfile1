@@ -1,14 +1,14 @@
 function Customer(id, name, address, salary) {
-    let __id = id;
+    let __cusid = id;
     let __name = name;
     let __address = address;
     let __salary = salary;
 
-    this.getId = function () {
-        return __id;
+    this.getCustomerID = function () {
+        return __cusid;
     }
-    this.setID = function (code) {
-        __id = id;
+    this.setCusID = function (code) {
+        __cusid = id;
     }
 
     this.getName = function () {
