@@ -31,6 +31,7 @@ $("#btnCustomerSave").click(function () {
     loadAllCustomer();
     bindEvent();
     clearCustomerAll();
+    cmbCustomers("<option>"+cusId+"</option>");
 
 });
 

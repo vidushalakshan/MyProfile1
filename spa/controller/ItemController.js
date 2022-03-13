@@ -1,5 +1,4 @@
 
-
 function clearAll() {
     $('#inputId,#inputName,#inputPrice,#inputQty').val("");
     $('#inputId').focus();
