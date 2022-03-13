@@ -205,6 +205,7 @@ $("#btnItemSave").click(function () {
     itemTable.push(i1);
     loadAllItem()
     bindEvent();
+    cmbItem("<option>"+itemID+"</option>");
     clearAll();
 });
 
