@@ -39,8 +39,6 @@ $("#inputId").on('keyup', function (eventOb) {
         $("#inputPrice").val(srcItem.getPrice());
         $("#inputQty").val(srcItem.getQty());
     }
-
-
 });
 
 $("#inputName").on('keyup', function (eventOb) {
@@ -182,11 +180,10 @@ $("#btnItemSave").click(function () {
     let itemID = $("#inputId").val();
     let itemName = $("#inputName").val();
     let price = $("#inputPrice").val();
-    let qty = $("#inputQty").val();
+    let qtyItem = $("#inputQty").val();
 
     let nullVal = '';
-
-    if (itemID == nullVal || itemName == nullVal || price == nullVal || qty == nullVal) {
+    if (itemID == nullVal || itemName == nullVal || price == nullVal || qtyItem== nullVal) {
         alert("warning-Please Input Data Correctly To Continue..");
         return;
     }
@@ -195,13 +192,13 @@ $("#btnItemSave").click(function () {
         alert("Item Updated");
         itemTable[index1].setItemName(itemName);
         itemTable[index1].setPrice(price);
-        itemTable[index1].setQty(qty);
+        itemTable[index1].setQty(qtyItem);
         loadAllItem();
         bindEvent();
         return;
     }
 
-    let i1 = new Item(itemID, itemName, price, qty);
+    let i1 = new Item(itemID, itemName, price, qtyItem);
     itemTable.push(i1);
     loadAllItem()
     bindEvent();
@@ -217,8 +214,8 @@ function loadAllItem() {
             let itemID=itemTable[i].getCode();
             let itemName=itemTable[i].getItemName();
             let price=itemTable[i].getPrice();
-            let qty=itemTable[i].getQty();
-            let row = `<tr><td>${itemID}</td><td>${itemName}</td><td>${price}</td><td>${qty}</td></tr>`;
+            let qtyItem=itemTable[i].getQty();
+            let row = `<tr><td>${itemID}</td><td>${itemName}</td><td>${price}</td><td>${qtyItem}</td></tr>`;
             $("#itemTable").append(row);
         }
 
@@ -231,12 +228,12 @@ function bindEvent() {
         let itemID = $(Row.children().get(0)).text();
         let itemName = $(Row.children().get(1)).text();
         let price = $(Row.children().get(2)).text();
-        let qty = $(Row.children().get(3)).text();
+        let qtyItem = $(Row.children().get(3)).text();
         //Assignment
         $("#inputId").val(itemID);
         $("#inputName").val(itemName);
         $("#inputPrice").val(price);
-        $("#inputQty").val(qty);
+        $("#inputQty").val(qtyItem);
     });
 }
 
