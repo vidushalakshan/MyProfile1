@@ -11,7 +11,7 @@
     <link href="assets/css/normalize.css" rel="stylesheet">
     <style>
 
-        *{
+        * {
             scroll-behavior: smooth;
         }
 
@@ -24,6 +24,7 @@
             padding: 2px 0;
             transition: all 0.3s ease;
         }
+
         header {
             position: fixed;
             height: 62px;
@@ -32,7 +33,7 @@
             margin-top: -17px;
         }
 
-        header> section> h1 {
+        header > section > h1 {
             font-size: 55px;
             display: inline;
             color: white;
@@ -42,7 +43,7 @@
             letter-spacing: 7px;
         }
 
-        header > section>nav> ul {
+        header > section > nav > ul {
             position: absolute;
             right: 25px;
             bottom: -21px;
@@ -55,18 +56,18 @@
             font-family: 'Crete Round', serif;
         }
 
-        header >section> nav > ul > li {
+        header > section > nav > ul > li {
             display: inline;
             text-decoration-line: none;
             padding: 0 10px 0 10px;
         }
 
-        header> section > nav > ul > li > a {
+        header > section > nav > ul > li > a {
             text-decoration-line: none;
             color: white;
         }
 
-        header> section > nav > ul > li.active a{
+        header > section > nav > ul > li.active a {
             color: #0089f2;
             box-shadow: inset 0 0 5px #0187f5,
             inset 0 0 10px #85c3fa,
@@ -81,7 +82,7 @@
             letter-spacing: -3.5px;
         }
 
-        #logo2{
+        #logo2 {
             color: #131313;
             transition: color 0.4s ease;
             animation-name: box;
@@ -91,23 +92,22 @@
         }
 
         @keyframes box {
-            0%,25%{
+            0%, 25% {
             }
-            25%{
+            25% {
                 background-color: yellow;
             }
-            50%{
+            50% {
                 background-color: #0e26e8;
             }
-            75%{
+            75% {
                 background-color: #008d1b;
             }
-            100%{
+            100% {
                 background-color: #ffa500;
             }
 
         }
-
 
 
         /* navbar stylig stop*/
@@ -185,7 +185,7 @@
             font-family: 'Crete Round', serif;
         }
 
-        .text4{
+        .text4 {
             font-size: 53px;
             font-weight: 600;
             margin-left: 41px;
@@ -200,25 +200,26 @@
             animation: animate 6s linear infinite;
         }
 
-       /* .text4::before{
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 0;
-            border-right: 2px solid red;
-            overflow: hidden;
-            animation: animate 6s linear infinite;
-        }*/
-        
+        /* .text4::before{
+             position: absolute;
+             top: 0;
+             left: 0;
+             height: 100%;
+             width: 0;
+             border-right: 2px solid red;
+             overflow: hidden;
+             animation: animate 6s linear infinite;
+         }*/
+
         @keyframes animate {
-            0%,10%,100%{
+            0%, 10%, 100% {
                 width: 0;
-            }70%,90%{
-            width: 100%;
-                         }
+            }
+            70%, 90% {
+                width: 100%;
+            }
         }
-        
+
         .sociallink {
             transition: ease-out 0.3s;
         }
@@ -229,8 +230,8 @@
             bottom: 0;
             right: 0;
             margin: auto;
-            height: 94vh;
-            width: 35vw;
+            height: 96vh;
+            width: 35vw
         }
 
         .btn1 {
@@ -396,14 +397,14 @@
                 height: 126px;
             }
 
-            header> section> h1 {
+            header > section > h1 {
                 font-size: 89px;
                 position: relative;
                 left: 30px;
                 top: 12px;
             }
 
-            header > section>nav> ul {
+            header > section > nav > ul {
                 top: -12px;
                 height: 40px;
                 font-size: 33px;
@@ -494,6 +495,7 @@
             width: 32vw;
             margin-left: 41px;
             margin-top: 39px;
+            border-radius: 240px;
         }
 
         .aboutedu {
@@ -1525,7 +1527,7 @@
             <div>
                 <button class="btn1">Hire Me</button>
             </div>
-            <img alt="There was an error loading this image.." class="homeimage" src="assets/image/vvv.png">
+            <img alt="There was an error loading this image.." class="homeimage" src="assets/image/@vidusha.png">
             <div class="sociallink">
                 <a href="https://www.facebook.com/vidusha.lakshan.100"><img
                         alt="There was an error loading this image.." class="imglinl1" src="assets/image/link1.png"
@@ -1551,7 +1553,7 @@
         <h1 class="aboutmemain">
             <dfn id="aboutme">About Me</dfn>
         </h1>
-        <img alt="There was an error loading this image.." class="aboutimg" src="assets/image/222.png">
+        <img alt="There was an error loading this image.." class="aboutimg" src="assets/image/@vidusha2.jpg">
         <asid>
             <pre class="detail">
                 Name    -    <b class="about1">A.M Vidusha Lakshan Predeep</b>
@@ -1752,27 +1754,27 @@
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 
 <script>
-   /* $(document).ready(function () {
-        $(window).scroll(function () {
-            if (this.scrollY > 20) {
-                $('.bar').addClass("sticky");
-            } else {
-                $('.bar').removeClass("sticky");
-            }
-        })
-    });*/
+    /* $(document).ready(function () {
+         $(window).scroll(function () {
+             if (this.scrollY > 20) {
+                 $('.bar').addClass("sticky");
+             } else {
+                 $('.bar').removeClass("sticky");
+             }
+         })
+     });*/
     $('nav ul li').click(function () {
         $(this).addClass("active").siblings().removeClass("active");
     })
 
-    let navbar=document.querySelector('bar');
-    let scrollPrevipus=window.pageYOffset;
-    window.onscroll=function () {
-        let scrollCurrent=window.pageYOffset;
-        if (scrollPrevipus>scrollCurrent){
-            navbar.style.top="0px";
-        }else {
-            navbar.style.top="-90px";
+    let navbar = document.querySelector('bar');
+    let scrollPrevipus = window.pageYOffset;
+    window.onscroll = function () {
+        let scrollCurrent = window.pageYOffset;
+        if (scrollPrevipus > scrollCurrent) {
+            navbar.style.top = "0px";
+        } else {
+            navbar.style.top = "-90px";
         }
     }
 </script>
