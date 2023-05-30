@@ -33,7 +33,7 @@
 **<h1>Overview Of My Profile</h1>**
 
 **Home**
- ![Home Section Img](assets/image/profileview/home.PNG)
+ ![Home Section Img](assets/image/profileview/homeProfile.png)
 
 **About**
 ![About Section Img](assets/image/profileview/about.PNG)
