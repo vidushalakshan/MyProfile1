@@ -561,7 +561,65 @@
         /* aboutme styling stop*/
 
         /*about media start*/
-        @media all and (max-device-width: 425px) {
+
+
+        @media all and (max-device-width: 374px) {
+            .aboutimg {
+                height: 170vh;
+                width: 312vw;
+                margin-left: 163px;
+                margin-top: 39px;
+                border-radius: 240px;
+            }
+
+            .aboutmemain {
+                text-align: center !important;
+            }
+            .detail {
+                position: absolute;
+                right: -204%;
+                bottom: -365%;
+            }
+            .aboutedu {
+                text-align: center;
+                font-size: 25px;
+                margin-top: 615px;
+            }
+
+            /*project section*/
+
+            .pname {
+                left: 567px;
+                bottom: -3306px !important;
+            }
+
+            main > section:nth-child(4) > section > div:nth-child(1) {
+                margin-left: 380px;
+                background-size: cover;
+                /* margin-left: 35px!important; */
+                width: 821px;
+            }
+
+
+            main > section:nth-child(4) > section > div:nth-child(3) {
+                background-size: cover;
+                margin-left: 541px !important;
+            }
+
+            #myprojects {
+                position: relative;
+                top: -338px;
+                left: 130px;
+            }
+
+            main > section:nth-child(4) > div {
+                display: none;
+            }
+
+
+        }
+
+        @media all and (max-device-width: 425px)and (min-device-width: 380px)  {
             section:nth-child(2) > h1 {
                 margin-top: 34px;
             }
